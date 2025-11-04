@@ -1,0 +1,95 @@
+@import "tailwindcss";
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f5f5f5;
+  background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===== Global Theme Variables ===== */
+:root {
+  --gold: #d4af37;
+  --dark-bg: #000000;
+}
+
+/* ===== Base Styles ===== */
+body {
+  background-color: var(--dark-bg);
+  color: var(--gold);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar Styling (Optional) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Glassmorphism Card ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+}
+
+/* ===== Text Glow Utility ===== */
+.text-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== Button Glow Effect ===== */
+.btn-gold {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg;
+}
+
+.footer-icon:hover {
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg;
+}
+.btn-gold {
+  @apply px-6 py-3 rounded-full font-medium;
+  background: rgba(212, 175, 55, 0.12);
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}

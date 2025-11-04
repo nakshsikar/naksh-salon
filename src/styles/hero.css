@@ -1,0 +1,8 @@
+.splide__slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.splide__pagination__page.is-active {
+  background: #d4af37 !important;
+}
