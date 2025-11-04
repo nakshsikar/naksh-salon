@@ -1,10 +1,10 @@
-import AboutSection from '../components/AboutSection'
-import BookNowSection from '../components/bookNowSection'
-import FAQSection from '../components/faqSection'
-import HeroSection from '../components/heroSection'
-import MovingGallerySection from '../components/movingGallerySection'
-import TestimonialsSection from '../components/testimonialsSection'
-import WhyChooseUsSection from '../components/whyChooseUsSection'
+import AboutSection from '../components/aboutSection'
+import BookNowSection from '../components/BookNowSection'
+import FAQSection from '../components/FaqSection'
+import HeroSection from '../components/HeroSection'
+import MovingGallerySection from '../components/MovingGallerySection'
+import TestimonialsSection from '../components/TestimonialsSection'
+import WhyChooseUsSection from '../components/WhyChooseUsSection'
 
 const Home = () => {
   return (
