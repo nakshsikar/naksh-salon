@@ -1,5 +1,5 @@
 import AboutSection from '../components/aboutSection'
-import BookNowSection from '../components/BookNowSection'
+import BookNowSection from '../components/bookNowSection'
 import FAQSection from '../components/FaqSection'
 import HeroSection from '../components/HeroSection'
 import MovingGallerySection from '../components/MovingGallerySection'
