@@ -3,12 +3,12 @@ import ScrollToTop from "./components/scrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import Home from "./pages/home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Blogs from "./pages/Blogs";
+import About from "./pages/about";
+import Services from "./pages/services";
+import Blogs from "./pages/blogs";
 import BlogPost from "./components/blogPost";
-import Contact from "./pages/Contact";
-import Career from "./pages/Career";
+import Contact from "./pages/contact";
+import Career from "./pages/career";
 
 function App() {
   return (
