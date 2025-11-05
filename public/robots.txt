@@ -1,8 +1,24 @@
 User-agent: *
-Disallow: /node_modules/
-Disallow: /dist/
-Disallow: /private/
 Allow: /
 
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /.env
+Disallow: /api/private/
+
+# Allow important assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+# Sitemap location
 Sitemap: https://nakshsalon.in/sitemap.xml
-Host: https://nakshsalon.in
+
+
+# Note: Host directive is not part of robots.txt standard
+# It's used in Yandex, but for Google use Search Console

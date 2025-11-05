@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
           What Our Clients Say
         </h2>
         <p className="text-gray-400 mt-3 p-5">
-          50+ happy clients who trust Naksh Salon for their glow ✨
+          250+ happy clients who trust Naksh Salon for their glow ✨
         </p>
       </motion.div>
 
