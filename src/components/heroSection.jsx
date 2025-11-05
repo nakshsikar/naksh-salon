@@ -1,39 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 export default function HeroSlider() {
-  const splideRef = useRef(null);
-
-  useEffect(() => {
-    const splide = splideRef.current?.splide;
-
-    // Add mouse wheel scroll event manually
-    const handleWheel = (e) => {
-      if (!splide) return;
-
-      // If user scrolls down & slider not at last slide → move to next
-      if (e.deltaY > 0 && splide.index < splide.length - 1) {
-        splide.go("+1");
-        e.preventDefault();
-      }
-
-      // If scroll up & not first → previous
-      else if (e.deltaY < 0 && splide.index > 0) {
-        splide.go("-1");
-        e.preventDefault();
-      }
-
-      // Once last slide reached → remove this listener (enable page scroll)
-      else if (splide.index === splide.length - 1 && e.deltaY > 0) {
-        window.removeEventListener("wheel", handleWheel);
-      }
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
-    return () => window.removeEventListener("wheel", handleWheel);
-  }, []);
-
   const slides = [
     {
       id: 1,
@@ -53,12 +22,11 @@ export default function HeroSlider() {
   ];
 
   return (
-    <section className="w-full h-screen">
+    <section className="w-full h-screen overflow-hidden">
       <Splide
-        ref={splideRef}
         options={{
           type: "loop",
-          direction: "ttb", // vertical transition
+          direction: "ttb", // vertical slide animation
           height: "100vh",
           autoplay: true,
           interval: 3000,
@@ -67,6 +35,7 @@ export default function HeroSlider() {
           pagination: true,
           pauseOnHover: false,
           resetProgress: false,
+          drag: false, // disable manual dragging (optional)
         }}
         aria-label="Naksh Unisex Salon Banner"
       >
