@@ -14,10 +14,10 @@ const Home = () => {
     "@type": "WebPage",
     "name": "Naksh Unisex Salon - Best Hair & Beauty Salon in Sikar, Rajasthan",
     "description": "Premium unisex salon in Sikar offering professional haircuts, bridal makeup, facial, nail art, hair coloring & beauty services for men and women. Book appointment +91-8690900970",
-    "url": "https://nakshsalon.in",
+    "url": "https://nakshsalon.com",
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": "https://nakshsalon.in/images/hero-banner.jpg",
+      "url": "https://nakshsalon.com/images/hero-banner.jpg",
       "width": "1200",
       "height": "630"
     },
@@ -58,21 +58,21 @@ const Home = () => {
         <meta name="author" content="Naksh Unisex Salon" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://nakshsalon.in" />
+        <link rel="canonical" href="https://nakshsalon.com" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Naksh Unisex Salon Sikar | Best Hair & Beauty Services in Rajasthan" />
         <meta property="og:description" content="Premium unisex salon in Sikar offering professional haircuts, bridal makeup, facial, nail art & beauty services. Book appointment +91-8690900970" />
-        <meta property="og:url" content="https://nakshsalon.in" />
+        <meta property="og:url" content="https://nakshsalon.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://nakshsalon.in/images/og-image.jpg" />
+        <meta property="og:image" content="https://nakshsalon.com/images/og-image.jpg" />
         <meta property="og:locale" content="hi_IN" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Naksh Unisex Salon Sikar | Best Beauty Services" />
         <meta name="twitter:description" content="Premium unisex salon in Sikar for haircuts, bridal makeup, facial & Nail Services. Book now +91-8690900970" />
-        <meta name="twitter:image" content="https://nakshsalon.in/images/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://nakshsalon.com/images/twitter-image.jpg" />
         
         {/* Additional Meta Tags */}
         <meta name="geo.region" content="IN-RJ" />

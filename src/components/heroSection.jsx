@@ -40,7 +40,7 @@ export default function HeroSlider() {
     "@type": "ImageGallery",
     "name": "Naksh Unisex Salon Services Gallery",
     "description": "Gallery of beauty services offered at Naksh Unisex Salon in Sikar, Rajasthan",
-    "url": "https://nakshsalon.in",
+    "url": "https://nakshsalon.com",
     "image": slides.map(slide => ({
       "@type": "ImageObject",
       "url": slide.img,

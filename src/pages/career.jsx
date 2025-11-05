@@ -72,7 +72,7 @@ export default function Career() {
     "@type": "ItemList",
     "name": "Career Opportunities at Naksh Unisex Salon",
     "description": "Job openings and training programs at Naksh Unisex Salon in Sikar, Rajasthan",
-    "url": "https://nakshsalon.in/career",
+    "url": "https://nakshsalon.com/career",
     "numberOfItems": jobs.length,
     "itemListElement": jobs.map((job, index) => ({
       "@type": "ListItem",
@@ -87,7 +87,7 @@ export default function Career() {
         "hiringOrganization": {
           "@type": "Organization",
           "name": "Naksh Unisex Salon",
-          "sameAs": "https://nakshsalon.in"
+          "sameAs": "https://nakshsalon.com"
         },
         "jobLocation": {
           "@type": "Place",
@@ -122,12 +122,12 @@ export default function Career() {
         <meta name="author" content="Naksh Unisex Salon" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://nakshsalon.in/career" />
+        <link rel="canonical" href="https://nakshsalon.com/career" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Careers at Naksh Salon Sikar | Beauty Industry Jobs & Training" />
         <meta property="og:description" content="Join Naksh Unisex Salon in Sikar - Career opportunities in Nail Services, skin treatment and hair chemical training programs." />
-        <meta property="og:url" content="https://nakshsalon.in/career" />
+        <meta property="og:url" content="https://nakshsalon.com/career" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}

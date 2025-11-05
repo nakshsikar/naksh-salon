@@ -38,7 +38,7 @@ export default function Blogs() {
     "@type": "Blog",
     "name": "Naksh Unisex Salon Beauty Blog",
     "description": "Expert beauty tips, hair trends, and grooming advice from Naksh Unisex Salon in Sikar, Rajasthan",
-    "url": "https://nakshsalon.in/blogs",
+    "url": "https://nakshsalon.com/blogs",
     "publisher": {
       "@type": "BeautySalon",
       "name": "Naksh Unisex Salon",
@@ -52,7 +52,7 @@ export default function Blogs() {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt,
-      "url": `https://nakshsalon.in/blogs/${post.slug}`,
+      "url": `https://nakshsalon.com/blogs/${post.slug}`,
       "datePublished": post.publishDate,
       "dateModified": post.publishDate,
       "articleSection": post.category,
@@ -79,12 +79,12 @@ export default function Blogs() {
         <meta name="author" content="Naksh Unisex Salon" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://nakshsalon.in/blogs" />
+        <link rel="canonical" href="https://nakshsalon.com/blogs" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Beauty Blog Sikar | Naksh Unisex Salon - Expert Hair & Makeup Tips" />
         <meta property="og:description" content="Discover expert beauty tips, hair trends and grooming advice from Naksh Unisex Salon - best salon in Sikar, Rajasthan." />
-        <meta property="og:url" content="https://nakshsalon.in/blogs" />
+        <meta property="og:url" content="https://nakshsalon.com/blogs" />
         <meta property="og:type" content="blog" />
         
         {/* Twitter Card */}

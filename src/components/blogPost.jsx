@@ -163,25 +163,25 @@ export default function BlogPost() {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
-    "image": "https://nakshsalon.in/images/blog-cover.jpg",
+    "image": "https://nakshsalon.com/images/blog-cover.jpg",
     "author": {
       "@type": "Organization",
       "name": post.author,
-      "url": "https://nakshsalon.in"
+      "url": "https://nakshsalon.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Naksh Unisex Salon",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://nakshsalon.in/logo.png"
+        "url": "https://nakshsalon.com/logo.png"
       }
     },
     "datePublished": post.publishDate,
     "dateModified": post.publishDate,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://nakshsalon.in/blogs/${slug}`
+      "@id": `https://nakshsalon.com/blogs/${slug}`
     },
     "articleSection": post.category,
     "keywords": ["beauty blog", "hair trends", "bridal makeup", "self care", "Sikar salon", "Rajasthan beauty"]
@@ -197,12 +197,12 @@ export default function BlogPost() {
         <meta name="author" content={post.author} />
         
         {/* Canonical URL */}
-        <link rel="canonical" href={`https://nakshsalon.in/blogs/${slug}`} />
+        <link rel="canonical" href={`https://nakshsalon.com/blogs/${slug}`} />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://nakshsalon.in/blogs/${slug}`} />
+        <meta property="og:url" content={`https://nakshsalon.com/blogs/${slug}`} />
         <meta property="og:type" content="article" />
         
         {/* Twitter Card */}

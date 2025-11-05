@@ -148,12 +148,12 @@ function Navbar() {
             "@context": "https://schema.org",
             "@type": "SiteNavigationElement",
             "name": "Main Navigation",
-            "url": "https://nakshsalon.in",
+            "url": "https://nakshsalon.com",
             "mainEntity": navItems.map((item, index) => ({
               "@type": "SiteNavigationElement",
               "position": index + 1,
               "name": item.label,
-              "url": `https://nakshsalon.in${item.path}`,
+              "url": `https://nakshsalon.com${item.path}`,
               "description": item.title
             }))
           })

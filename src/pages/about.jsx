@@ -8,7 +8,7 @@ export default function About() {
     "@type": "AboutPage",
     "name": "About Naksh Unisex Salon Sikar",
     "description": "Learn about Naksh Salon - best unisex salon in Sikar offering premium hair, skin, and beauty services for men and women.",
-    "url": "https://nakshsalon.in/about",
+    "url": "https://nakshsalon.com/about",
     "mainEntity": {
       "@type": "BeautySalon",
       "name": "Naksh Unisex Salon",
@@ -41,12 +41,12 @@ export default function About() {
         <meta name="author" content="Naksh Unisex Salon" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://nakshsalon.in/about" />
+        <link rel="canonical" href="https://nakshsalon.com/about" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="About Naksh Salon Sikar | Best Unisex Salon for Hair & Beauty" />
         <meta property="og:description" content="Learn about Naksh Salon - premium unisex salon in Sikar offering hair styling, bridal makeup, facial and beauty services for men and women." />
-        <meta property="og:url" content="https://nakshsalon.in/about" />
+        <meta property="og:url" content="https://nakshsalon.com/about" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}

@@ -68,12 +68,12 @@ export default function Contact() {
     "@type": "ContactPage",
     "name": "Contact Naksh Unisex Salon Sikar",
     "description": "Get in touch with Naksh Unisex Salon for hair styling, bridal makeup, facial and Nail Services in Sikar, Rajasthan",
-    "url": "https://nakshsalon.in/contact",
+    "url": "https://nakshsalon.com/contact",
     "mainEntity": {
       "@type": "BeautySalon",
       "name": "Naksh Unisex Salon",
       "telephone": "+91-8690900970",
-      "email": "info@nakshsalon.in",
+      "email": "info@nakshsalon.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Shri Yash Tower Road, Opposite Apple Imagine Store, Near Pawan Travels",
@@ -107,12 +107,12 @@ export default function Contact() {
         <meta name="author" content="Naksh Unisex Salon" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://nakshsalon.in/contact" />
+        <link rel="canonical" href="https://nakshsalon.com/contact" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Contact Naksh Salon Sikar | Best Beauty Services in Rajasthan" />
         <meta property="og:description" content="Get in touch with Naksh Unisex Salon Sikar for hair, makeup, facial and Nail Services. Call +91-8690900970 for appointments." />
-        <meta property="og:url" content="https://nakshsalon.in/contact" />
+        <meta property="og:url" content="https://nakshsalon.com/contact" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}

@@ -73,7 +73,7 @@ export default function MovingGallerySection() {
     "@type": "ImageGallery",
     "name": "Naksh Unisex Salon Gallery - Beauty Services in Sikar",
     "description": "Gallery showcasing hair styling, bridal makeup, facial treatments, Nail Services and beauty treatments at Naksh Unisex Salon in Sikar, Rajasthan",
-    "url": "https://nakshsalon.in",
+    "url": "https://nakshsalon.com",
     "mainEntity": {
       "@type": "BeautySalon",
       "name": "Naksh Unisex Salon",
@@ -85,7 +85,7 @@ export default function MovingGallerySection() {
     },
     "image": [...imagesRow1, ...imagesRow2].map(img => ({
       "@type": "ImageObject",
-      "contentUrl": `https://nakshsalon.in${img.src}`,
+      "contentUrl": `https://nakshsalon.com${img.src}`,
       "name": img.title,
       "description": img.alt,
       "caption": `Naksh Salon Sikar - ${img.title}`
@@ -143,7 +143,7 @@ export default function MovingGallerySection() {
               itemType="https://schema.org/ImageObject"
             >
               {/* Hidden SEO Metadata */}
-              <meta itemProp="contentUrl" content={`https://nakshsalon.in${img.src}`} />
+              <meta itemProp="contentUrl" content={`https://nakshsalon.com${img.src}`} />
               <meta itemProp="name" content={img.title} />
               <meta itemProp="description" content={img.alt} />
               
@@ -179,7 +179,7 @@ export default function MovingGallerySection() {
               itemType="https://schema.org/ImageObject"
             >
               {/* Hidden SEO Metadata */}
-              <meta itemProp="contentUrl" content={`https://nakshsalon.in${img.src}`} />
+              <meta itemProp="contentUrl" content={`https://nakshsalon.com${img.src}`} />
               <meta itemProp="name" content={img.title} />
               <meta itemProp="description" content={img.alt} />
               

@@ -125,12 +125,12 @@ export default function Services() {
         <meta name="author" content="Naksh Unisex Salon" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://nakshsalon.in/services" />
+        <link rel="canonical" href="https://nakshsalon.com/services" />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Salon Services in Sikar | Naksh Unisex Salon - Premium Beauty & Grooming" />
         <meta property="og:description" content="Professional salon services in Sikar - haircuts, bridal makeup, facial, spa & beauty treatments for men and women. Book now!" />
-        <meta property="og:url" content="https://nakshsalon.in/services" />
+        <meta property="og:url" content="https://nakshsalon.com/services" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}

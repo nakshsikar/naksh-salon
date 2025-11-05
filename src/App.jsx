@@ -29,35 +29,35 @@ function App() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://nakshsalon.in",
+                "item": "https://nakshsalon.com",
                 "description": "Naksh Unisex Salon - Best Salon in Sikar"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Beauty Services in Sikar",
-                "item": "https://nakshsalon.in/services",
+                "item": "https://nakshsalon.com/services",
                 "description": "Haircut, Bridal Makeup, Facial & Nail Services"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "About Naksh Salon",
-                "item": "https://nakshsalon.in/about",
+                "item": "https://nakshsalon.com/about",
                 "description": "Best unisex salon in Sikar, Rajasthan"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Beauty Tips & Blogs",
-                "item": "https://nakshsalon.in/blogs",
+                "item": "https://nakshsalon.com/blogs",
                 "description": "Hair care, makeup tips and beauty advice"
               },
               {
                 "@type": "ListItem",
                 "position": 5,
                 "name": "Contact Salon",
-                "item": "https://nakshsalon.in/contact",
+                "item": "https://nakshsalon.com/contact",
                 "description": "Visit Naksh Salon in Sikar +91-8690900970"
               }
             ]
@@ -73,7 +73,7 @@ function App() {
         role="main" 
         itemScope 
         itemType="https://schema.org/WebPage"
-        itemID="https://nakshsalon.in"
+        itemID="https://nakshsalon.com"
       >
         <meta itemProp="name" content="Naksh Unisex Salon Sikar" />
         <meta itemProp="description" content="Best unisex salon in Sikar for haircuts, bridal makeup, facial, spa & beauty services. Expert stylists, affordable prices." />
@@ -131,7 +131,7 @@ const NotFound = () => {
     "@type": "WebPage",
     "name": "Page Not Found - Naksh Salon Sikar",
     "description": "The page you're looking for doesn't exist. Return to Naksh Unisex Salon homepage.",
-    "url": "https://nakshsalon.in/404",
+    "url": "https://nakshsalon.com/404",
     "mainEntity": {
       "@type": "WebPage",
       "name": "Naksh Unisex Salon Sikar"
