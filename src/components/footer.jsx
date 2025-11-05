@@ -42,7 +42,7 @@ export default function Footer() {
           <h4 className="text-lg font-semibold text-[#d4af37] mb-4">Follow Us</h4>
           <div className="flex gap-4 mb-4">
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/nakshsalon"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full border border-[#d4af37]/30 hover:border-[#d4af37] transition"
@@ -50,7 +50,7 @@ export default function Footer() {
               <Instagram className="text-[#d4af37]" size={22} />
             </a>
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/share/16LQkFjvUw/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full border border-[#d4af37]/30 hover:border-[#d4af37] transition"

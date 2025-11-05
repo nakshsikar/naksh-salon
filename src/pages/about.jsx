@@ -72,7 +72,7 @@ export default function About() {
               </p>
             </div>
             <img
-              src="/1.webp"
+              src="/our-vision.jpg"
               alt="Our Vision - Naksh Unisex Salon"
               className="rounded-2xl shadow-[0_0_25px_rgba(212,175,55,0.15)] border border-[#d4af37]/20"
             />
@@ -87,9 +87,9 @@ export default function About() {
             className="mt-16 grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse"
           >
             <img
-              src="/2.webp"
+              src="/our-mission.jpg"
               alt="Our Mission - Unisex Salon Experience"
-              className="rounded-2xl shadow-[0_0_25px_rgba(212,175,55,0.15)] border border-[#d4af37]/20"
+              className="rounded-2xl"
             />
             <div className="space-y-4">
               <h2 className="text-3xl font-semibold text-[#d4af37]">Our Mission</h2>

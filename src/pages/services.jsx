@@ -1,9 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
 // WhatsApp redirect number
-const WHATSAPP_NUMBER = "919876543210"; // replace with your number (without +)
+const WHATSAPP_NUMBER = "918690900970";
 
 const menServices = [
   {

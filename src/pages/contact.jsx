@@ -157,48 +157,40 @@ export default function Contact() {
               </div>
             </div>
           </form>
-
-          {/* 📞 Contact Details */}
-          <div className="mt-12 text-center space-y-4">
-            <h2 className="text-2xl font-semibold text-[#d4af37]">
-              Contact Information
-            </h2>
-            <p className="text-gray-300">
-              Call us at:{" "}
-              <a href="tel:+918690900970" className="text-[#d4af37]">
-                +91 86909 00970
-              </a>{" "}
-              |{" "}
-              <a href="tel:+917877705277" className="text-[#d4af37]">
-                +91 78777 05277
-              </a>
-            </p>
-            <p className="text-gray-300">
-              Email:{" "}
-              <a
-                href="mailto:naksh.sikar@gmail.com"
-                className="text-[#d4af37]"
-              >
-                naksh.sikar@gmail.com
-              </a>
-            </p>
-          </div>
         </div>
       </section>
 
       {/* 🗺️ Google Map Section */}
-      <section className="w-full">
-        <iframe
-          title="Naksh Unisex Salon Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.505329992925!2d75.13474377479692!3d27.60948477627573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396cb68fdbf6b73f%3A0x6d5e41cfd646f18b!2sNaksh%20Unisex%20Salon!5e0!3m2!1sen!2sin!4v1730717182000!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="border-0"
-        ></iframe>
+      <section className="w-full bg-black text-[#d4af37] py-10">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    {/* 🗺️ Google Map Embed */}
+    <iframe
+      title="Naksh Unisex Salon Location"
+      src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Naksh Salon ,Shri Yash Tower Road, Opposite Apple Imagine Store, Near Pawan Travels, Sikar&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      width="100%"
+      height="400"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="border-0 rounded-2xl shadow-lg"
+    ></iframe>
+
+    {/* 🏷️ Salon Info */}
+    <div className="mt-8">
+      <h2 className="text-2xl font-semibold tracking-wide">
+        📍 Naksh Unisex Salon
+      </h2>
+      <p className="text-gray-300 mt-2 text-lg leading-relaxed">
+        Shri Yash Tower Road, Opposite Apple Imagine Store, Near Pawan Travels, <br />
+        Sikar, Rajasthan – 332001
+      </p>
+      <p className="mt-4 text-sm text-gray-400">
+        Open Daily: 10:00 AM – 8:00 PM | Call Us: <a href="tel:+91 8690900970" className="text-[#d4af37] underline hover:text-yellow-400">+91-9XXXXXXXXX</a>
+      </p>
+    </div>
+  </div>
       </section>
+
     </>
   );
 }

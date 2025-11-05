@@ -28,7 +28,7 @@ export default function BookNowSection() {
         </p>
 
         <motion.a
-          href="#"
+          href="/contact"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#d4af37] text-black px-10 py-4 rounded-full font-semibold text-lg shadow-[0_0_25px_rgba(212,175,55,0.6)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.9)]"

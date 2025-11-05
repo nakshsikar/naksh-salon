@@ -23,8 +23,8 @@ export default function AboutSection() {
           {/* Image 1 */}
           <div className="glass-card rounded-2xl overflow-hidden h-64">
             <img
-              src="/1.webp"
-              alt="Salon Experience"
+              src="/interior.jpg"
+              alt="Professional hair styling at Naksh Salon in Sikar"
               className="object-cover w-full h-64 hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -32,8 +32,8 @@ export default function AboutSection() {
           {/* Image 2 */}
           <div className="glass-card rounded-2xl overflow-hidden mt-8">
             <img
-              src="5.avif"
-              alt="Luxury Care"
+              src="/interior2.jpg"
+              alt="Luxury beauty care at Naksh Unisex Salon Sikar"
               className="object-cover w-full h-64 hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -41,8 +41,8 @@ export default function AboutSection() {
           {/* Image 3 */}
           <div className="glass-card rounded-2xl overflow-hidden col-span-2">
             <img
-              src="/4.jpeg"
-              alt="Makeup Studio"
+              src="/interior3.jpg"
+              alt="Bridal and makeup services at Naksh Salon Sikar"
               className="object-cover w-full h-72 hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -57,27 +57,36 @@ export default function AboutSection() {
           className="md:w-1/2 space-y-6 text-center md:text-left"
         >
           <h2 className="text-4xl md:text-5xl font-semibold text-[#d4af37] text-glow">
-            Discover Timeless Beauty
+            Discover Timeless Beauty at Naksh Unisex Salon
           </h2>
 
           <p className="text-gray-300 leading-relaxed">
-            At <span className="text-[#d4af37] font-medium">Naksh Salon</span>,
-            we redefine beauty as an art form. Our expert stylists combine
-            precision, creativity, and care to bring out your most radiant self
-            — every time you visit.
+            Welcome to{" "}
+            <span className="text-[#d4af37] font-medium">
+              Naksh Unisex Salon – Sikar’s best salon for men and women
+            </span>
+            , where beauty meets perfection. From precision haircuts and expert
+            coloring to rejuvenating skincare and bridal makeup, our professional
+            stylists are dedicated to enhancing your natural charm.
           </p>
 
-          <p className="text-gray-400">
-            Step into a space where sophistication meets serenity. Whether
-            you're preparing for an occasion or indulging in a little
-            self-love, we make sure every detail reflects elegance.
-          </p>
-          <p className="text-gray-400">
-            Step into a space where sophistication meets serenity. Whether
-            you're preparing for an occasion or indulging in a little
-            self-love, we make sure every detail reflects elegance.
+          <p className="text-gray-400 leading-relaxed">
+            We believe every client deserves a premium salon experience. Our
+            modern setup blends comfort with creativity, offering personalized
+            hair and beauty treatments that reflect your unique style. Whether
+            it’s a glam makeover, party look, or routine grooming, we ensure
+            every visit makes you feel confident, refreshed, and radiant.
           </p>
 
+          <p className="text-gray-400 leading-relaxed">
+            As a trusted{" "}
+            <span className="text-[#d4af37] font-medium">
+              beauty and hair salon in Sikar
+            </span>
+            , Naksh Salon brings together luxury, hygiene, and artistry under
+            one roof. Step in, relax, and let our experts craft a look that truly
+            defines you — because your beauty deserves the best touch.
+          </p>
         </motion.div>
       </div>
     </section>

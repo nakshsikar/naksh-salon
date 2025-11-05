@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://nakshsalon.in/sitemap.xml
+Host: https://nakshsalon.in

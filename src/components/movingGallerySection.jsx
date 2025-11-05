@@ -1,19 +1,23 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 export default function MovingGallerySection() {
   const imagesRow1 = [
-    "https://images.unsplash.com/photo-1600346035522-303f09d1d55b?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1601047979989-8a76f5883a2d?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1596464716121-7b8f74f0b6e9?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80",
+    "/1.webp",
+    "/2.jpg",
+    "/3.webp",
+    "/4.webp",
+    "/5.jpg",
+    "nail-art2.png"
   ];
 
   const imagesRow2 = [
-    "https://images.unsplash.com/photo-1618354691397-4a2e16e3b5e2?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1609890399538-178d9f481b59?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1615461066841-39e2a8bb0c72?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1616530940355-351fabd9524b?auto=format&fit=crop&w=800&q=80",
+    "/6.webp",
+    "/7.jpg",
+    "/8.webp",
+    "/9.jpg",
+    "/10.jpg",
+    "nail-art1.avif"
+
   ];
 
   return (

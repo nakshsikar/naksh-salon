@@ -1,77 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi-IN" prefix="og: https://ogp.me/ns#">
   <head>
-    <!-- ✅ Basic Meta -->
+    <!-- Character Encoding & Viewport -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ✅ Title (SEO + Branding) -->
-    <title>Naksh Unisex Salon | Best Hair, Beauty & Makeup Services for Men & Women in Sikar</title>
-
-    <!-- ✅ Meta Description -->
-    <meta name="description" content="Naksh Unisex Salon in Sikar offers premium haircuts, styling, bridal & groom makeup, facials, spa, and beauty services for men and women. Book your appointment for expert care and luxury salon experience." />
-
-    <!-- ✅ Keywords -->
-    <meta name="keywords" content="Naksh Unisex Salon, salon in Sikar, unisex salon Sikar, best salon for men and women, bridal makeup Sikar, groom makeover, hair styling Sikar, beauty spa Sikar, facial treatment Sikar, haircut near me" />
-
-    <!-- ✅ Author -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Naksh Unisex Salon Sikar | Best Haircut, Bridal Makeup & Beauty Services for Men & Women</title>
+    <meta name="description" content="✨ Best Unisex Salon in Sikar - Professional haircuts, bridal makeup, groom makeup, facial, spa, hair coloring & beauty services. ✅ Expert stylists ✅ Affordable prices ✅ Book now +91-8690900970" />
+    <meta name="keywords" content="salon in sikar, unisex salon sikar, bridal makeup sikar, hair salon sikar, beauty parlour sikar, facial sikar, spa sikar, haircut sikar, makeup artist sikar, naksh salon sikar" />
     <meta name="author" content="Naksh Unisex Salon" />
-
-    <!-- ✅ Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <!-- ✅ Fonts (Modern Elegant Pair) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- ✅ Open Graph (Facebook / LinkedIn) -->
-    <meta property="og:title" content="Naksh Unisex Salon | Best Salon in Sikar for Men & Women" />
-    <meta property="og:description" content="Transform your style at Naksh Unisex Salon — expert haircuts, bridal makeup, facials, and spa treatments in Sikar. Book today!" />
-    <meta property="og:image" content="https://nakshsalon.in/og-image.jpg" />
-    <meta property="og:url" content="https://nakshsalon.in" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#D4AF37" />
+    <meta name="msapplication-TileColor" content="#D4AF37" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Naksh Unisex Salon" />
-
-    <!-- ✅ Twitter Card -->
+    <meta property="og:url" content="https://nakshsalon.in" />
+    <meta property="og:title" content="Naksh Unisex Salon Sikar | Best Hair & Beauty Services for Men & Women" />
+    <meta property="og:description" content="Best salon in Sikar for haircuts, bridal makeup, facial, spa & beauty services. Expert stylists, affordable prices. Book now +91-8690900970" />
+    <meta property="og:image" content="https://nakshsalon.in/images/og-image.jpg" />
+    <meta property="og:image:alt" content="Naksh Unisex Salon - Premium hair and beauty studio in Sikar" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="hi_IN" />
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Naksh Unisex Salon | Luxury Hair & Beauty Studio in Sikar" />
-    <meta name="twitter:description" content="Experience luxury hair, beauty, and spa treatments for men & women at Naksh Unisex Salon, Sikar." />
-    <meta name="twitter:image" content="https://nakshsalon.in/og-image.jpg" />
-
-    <!-- ✅ Canonical Tag -->
+    <meta name="twitter:creator" content="@nakshsalon" />
+    <meta name="twitter:title" content="Naksh Unisex Salon Sikar | Best Hair & Beauty Services" />
+    <meta name="twitter:description" content="Premium unisex salon in Sikar for haircuts, bridal makeup, facial & spa services. Book appointment +91-8690900970" />
+    <meta name="twitter:image" content="https://nakshsalon.in/images/twitter-image.jpg" />
+    
+    <!-- Canonical -->
     <link rel="canonical" href="https://nakshsalon.in" />
-
-    <!-- ✅ Structured Data (Salon Local Business Schema) -->
+    
+    <!-- Additional Meta -->
+    <meta name="geo.region" content="IN-RJ" />
+    <meta name="geo.placename" content="Sikar" />
+    <meta name="geo.position" content="27.6094;75.1399" />
+    <meta name="ICBM" content="27.6094, 75.1399" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="copyright" content="Naksh Unisex Salon" />
+    
+    <!-- Comprehensive LocalBusiness Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HairSalon",
-      "name": "Naksh Unisex Salon",
-      "image": "https://nakshsalon.com/og-image.jpg",
-      "@id": "https://nakshsalon.in",
-      "url": "https://nakshsalon.in",
-      "telephone": "+91-8690900970",
-      "priceRange": "₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Pawan Travels ki Gali, Opposite Apple Imagine Store, Sikar, Rajasthan",
-        "addressLocality": "Sikar",
-        "addressRegion": "Rajasthan",
-        "postalCode": "332001",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 27.6094,
-        "longitude": 75.1399
-      },
-      "openingHours": "Mo-Su 10:00-20:00",
-      "sameAs": [
-        "https://www.facebook.com/nakshsalonsikar",
-        "https://www.instagram.com/nakshsalon",
-        "https://www.google.com/maps/place/Naksh+Unisex+Salon"
+      "@graph": [
+        {
+          "@type": "HairSalon",
+          "@id": "https://nakshsalon.in/#salon",
+          "name": "Naksh Unisex Salon",
+          "description": "Best unisex salon in Sikar offering professional haircuts, bridal makeup, groom makeup, facial, spa, hair coloring and complete beauty services for men and women.",
+          "image": [
+            "https://nakshsalon.in/images/salon-interior-1.jpg",
+            "https://nakshsalon.in/images/bridal-makeup-service.jpg",
+            "https://nakshsalon.in/images/hair-styling-service.jpg"
+          ],
+          "url": "https://nakshsalon.in",
+          "telephone": "+91-8690900970",
+          "priceRange": "₹₹ - ₹₹₹",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Pawan Travels ki Gali, Opposite Apple Imagine Store",
+            "addressLocality": "Sikar",
+            "addressRegion": "Rajasthan",
+            "postalCode": "332001",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.6094,
+            "longitude": 75.1399
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "10:00",
+              "closes": "20:00"
+            }
+          ],
+          "openingHours": "Mo-Su 10:00-20:00",
+          "areaServed": {
+            "@type": "City",
+            "name": "Sikar"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Beauty Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Hair Cut & Styling",
+                  "description": "Professional haircuts for men and women"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Bridal Makeup",
+                  "description": "Complete bridal makeup packages"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Groom Makeup",
+                  "description": "Groom makeup and grooming services"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Facial & Spa",
+                  "description": "Skin care and relaxation treatments"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Hair Coloring",
+                  "description": "Professional hair color services"
+                }
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "127"
+          },
+          "sameAs": [
+            "https://www.facebook.com/nakshsalonsikar",
+            "https://www.instagram.com/nakshsalon",
+            "https://www.google.com/maps/place/Naksh+Unisex+Salon"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nakshsalon.in/#website",
+          "url": "https://nakshsalon.in",
+          "name": "Naksh Unisex Salon Sikar",
+          "description": "Best unisex salon in Sikar for hair, beauty and makeup services",
+          "publisher": {
+            "@id": "https://nakshsalon.in/#salon"
+          },
+          "inLanguage": "hi-IN"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://nakshsalon.in/#webpage",
+          "url": "https://nakshsalon.in",
+          "name": "Naksh Unisex Salon Sikar | Best Hair & Beauty Services",
+          "isPartOf": {
+            "@id": "https://nakshsalon.in/#website"
+          },
+          "about": {
+            "@id": "https://nakshsalon.in/#salon"
+          },
+          "description": "Premium unisex salon in Sikar offering professional beauty services",
+          "inLanguage": "hi-IN"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the salon timings of Naksh Unisex Salon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Naksh Unisex Salon is open from 10:00 AM to 8:00 PM, all days of the week including Sundays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to book appointment in advance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we recommend booking appointments in advance, especially for bridal makeup and special occasions to ensure availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services do you offer for brides?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer complete bridal packages including makeup, hairstyling, mehndi, pre-bridal facials, and grooming services."
+          }
+        }
       ]
     }
     </script>
@@ -79,6 +227,34 @@
 
   <body>
     <div id="root"></div>
+    
+    <!-- Noscript for SEO -->
+    <noscript>
+      <div style="text-align:center; padding:20px; background:#f8f9fa;">
+        <h1>Naksh Unisex Salon - Best Salon in Sikar</h1>
+        <p>Experience premium hair styling, bridal makeup, facial and beauty services at Naksh Unisex Salon in Sikar.</p>
+        <p><strong>Address:</strong> Pawan Travels ki Gali, Opposite Apple Imagine Store, Sikar, Rajasthan - 332001</p>
+        <p><strong>Phone:</strong> <a href="tel:+918690900970">+91 86909 00970</a></p>
+        <p><strong>Timings:</strong> 10:00 AM - 8:00 PM (All Days Open)</p>
+      </div>
+    </noscript>
+    
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Schema for Breadcrumb (if needed later) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nakshsalon.in"
+        }
+      ]
+    }
+    </script>
   </body>
 </html>
