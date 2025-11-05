@@ -38,7 +38,7 @@ function Navbar() {
         {/* Logo with SEO optimized attributes */}
         <Link 
           to="/" 
-          className="flex items-center gap-2 flex-shrink-0"
+          className="flex items-center gap-2 shrink-0"
           title="Naksh Unisex Salon - Premium Beauty Services in Sikar"
           aria-label="Visit Naksh Salon Homepage"
           itemProp="url"
@@ -83,7 +83,7 @@ function Navbar() {
           className="hidden lg:inline-block px-4 py-2 bg-[#d4af37]/20 border border-[#d4af37]/50 
           rounded-full text-[#d4af37] text-sm uppercase tracking-wide 
           hover:bg-[#d4af37]/30 transition duration-300 shadow-[0_0_10px_rgba(212,175,55,0.3)] 
-          whitespace-nowrap flex-shrink-0"
+          whitespace-nowrap shrink-0"
           title="Career Opportunities at Naksh Salon Sikar"
           aria-label="Explore career opportunities at Naksh Salon"
           role="button"
