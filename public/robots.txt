@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Disallow sensitive directories
+# Disallow sensitive or non-public directories
 Disallow: /admin/
 Disallow: /private/
 Disallow: /node_modules/
@@ -10,15 +10,15 @@ Disallow: /build/
 Disallow: /.env
 Disallow: /api/private/
 
-# Allow important assets
+# Allow essential static assets
 Allow: /css/
 Allow: /js/
 Allow: /images/
 Allow: /fonts/
 
-# Sitemap location
+# Sitemap
 Sitemap: https://nakshsalon.com/sitemap.xml
 
-
-# Note: Host directive is not part of robots.txt standard
-# It's used in Yandex, but for Google use Search Console
+# Note:
+# - 'Host' directive is used only by Yandex, not by Google.
+# - Ensure your sitemap.xml is publicly accessible.
