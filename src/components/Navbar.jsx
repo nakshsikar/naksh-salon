@@ -44,7 +44,7 @@ function Navbar() {
           itemProp="url"
         >
           <img
-            src="./logo.png"
+            src="/logo.png"
             alt="Naksh Unisex Salon Logo - Best hair and beauty salon in Sikar, Rajasthan"
             className="h-8 sm:h-10 w-auto drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]"
             width="40"

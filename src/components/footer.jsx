@@ -13,7 +13,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img
-              src="./logo.png"
+              src="/logo.png"
               alt="Naksh Salon Logo"
               className="h-12 w-auto drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]"
             />
