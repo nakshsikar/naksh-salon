@@ -1,110 +1,63 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
-const jobs = [
-  {
-    id: "nail-academy-learner",
-    title: "Nail Academy Learner",
-    desc: "Join our nail academy in Sikar to master creative Nail Services and extension techniques under expert guidance. No prior experience required.",
-    location: "Sikar, Rajasthan",
-    type: "Training Program",
-    experience: "Freshers Welcome"
-  },
-  {
-    id: "skin-treatment-learner",
-    title: "Skin Treatment Learner",
-    desc: "Learn advanced facials, peels, and skincare procedures from certified professionals at Naksh Salon Sikar. Perfect for beginners interested in beauty care.",
-    location: "Sikar, Rajasthan",
-    type: "Training Program", 
-    experience: "No Experience Needed"
-  },
-  {
-    id: "hair-chemical-learner",
-    title: "Hair Chemical Learner",
-    desc: "Get hands-on training in hair coloring, keratin, smoothening, and chemical treatments at our Sikar salon with step-by-step professional support.",
-    location: "Sikar, Rajasthan",
-    type: "Training Program",
-    experience: "Beginner Friendly"
-  },
-];
-
-// Your EmailJS Configuration
 const EMAILJS_CONFIG = {
   SERVICE_ID: "service_v6wpigq",
-  TEMPLATE_ID: "template_ix4xz3c", 
+  TEMPLATE_ID: "template_ix4xz3c",
   PUBLIC_KEY: "xT812jFctcGuHma95",
 };
 
-export default function Career() {
-  const [apply, setApply] = useState({
-    jobId: "",
+export default function ContactUs() {
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    resume: null,
+    gender: "",
+    age: "",
+    location: "",
     msg: null,
     isSubmitting: false,
   });
 
-  const handleChange = (e) =>
-    setApply({ ...apply, [e.target.name]: e.target.value });
-  
-  const handleFile = (e) =>
-    setApply({ ...apply, resume: e.target.files[0] });
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleApply = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Validation
-    if (!apply.jobId || !apply.name || !apply.email || !apply.phone || !apply.resume) {
-      setApply((prev) => ({
-        ...prev,
-        msg: "⚠️ Please fill out all required fields before submitting.",
-      }));
+
+    if (!form.name || !form.email || !form.phone || !form.gender || !form.age || !form.location) {
+      setForm((prev) => ({ ...prev, msg: "⚠️ Please fill all fields before submitting." }));
       return;
     }
 
-    setApply((prev) => ({ ...prev, isSubmitting: true, msg: "📨 Sending your application..." }));
+    setForm((prev) => ({ ...prev, isSubmitting: true, msg: "📨 Sending your message..." }));
 
     try {
-      // Get selected job details
-      const selectedJob = jobs.find(job => job.id === apply.jobId);
       const currentYear = new Date().getFullYear();
 
-      // Prepare template parameters for EmailJS
       const templateParams = {
         to_email: "naksh.sikar@gmail.com",
-        from_name: apply.name,
-        from_email: apply.email,
-        phone: apply.phone,
-        job_title: selectedJob?.title || apply.jobId,
-        job_location: selectedJob?.location || "Sikar, Rajasthan",
-        job_type: selectedJob?.type || "Training Program",
-        experience_required: selectedJob?.experience || "Freshers Welcome",
-        year: currentYear,
+        from_name: form.name,
+        from_email: form.email,
+        phone: form.phone,
+        gender: form.gender,
+        age: form.age,
+        location: form.location,
         message: `
-🚀 New Career Application - Naksh Salon Sikar 🚀
+📩 New Contact Request from Naksh Salon Website
 
-Applicant Details:
-📛 Name: ${apply.name}
-📧 Email: ${apply.email} 
-📞 Phone: ${apply.phone}
+👤 Name: ${form.name}
+📧 Email: ${form.email}
+📞 Phone: ${form.phone}
+🚻 Gender: ${form.gender}
+🎂 Age: ${form.age}
+📍 Location: ${form.location}
 
-Applied For:
-🎯 Program: ${selectedJob?.title}
-📍 Location: ${selectedJob?.location}
-📋 Type: ${selectedJob?.type}
-💼 Experience: ${selectedJob?.experience}
-
-Resume: ✅ Attached File
-Submitted via Naksh Salon Website - ${currentYear}
+Sent via Naksh Unisex Salon Website - ${currentYear}
         `,
-        resume_file: apply.resume,
       };
 
-      // Send email using YOUR credentials
       const result = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
@@ -112,316 +65,202 @@ Submitted via Naksh Salon Website - ${currentYear}
         EMAILJS_CONFIG.PUBLIC_KEY
       );
 
-      if (result.text === 'OK') {
-        setApply({
-          jobId: "",
+      if (result.text === "OK") {
+        setForm({
           name: "",
           email: "",
           phone: "",
-          resume: null,
+          gender: "",
+          age: "",
+          location: "",
+          msg: "✅ Thank you! Your message has been sent successfully.",
           isSubmitting: false,
-          msg: "✅ Application submitted successfully! We'll get in touch soon via email.",
         });
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
-      setApply((prev) => ({
+      console.error("EmailJS Error:", error);
+      setForm((prev) => ({
         ...prev,
+        msg: "❌ Failed to send message. Please try again later.",
         isSubmitting: false,
-        msg: "❌ Failed to submit application. Please try again or contact us directly.",
       }));
     }
   };
 
-  // Structured Data for Job Postings (same as before)
-  const jobPostingSchema = {
+  // Schema Markup (SEO)
+  const contactSchema = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Career Opportunities at Naksh Unisex Salon",
-    "description": "Job openings and training programs at Naksh Unisex Salon in Sikar, Rajasthan",
-    "url": "https://nakshsalon.com/career",
-    "numberOfItems": jobs.length,
-    "itemListElement": jobs.map((job, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "JobPosting",
-        "title": job.title,
-        "description": job.desc,
-        "datePosted": "2024-12-01",
-        "validThrough": "2025-03-01",
-        "employmentType": "FULL_TIME",
-        "hiringOrganization": {
-          "@type": "Organization",
-          "name": "Naksh Unisex Salon",
-          "sameAs": "https://nakshsalon.com"
-        },
-        "jobLocation": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Sikar",
-            "addressRegion": "Rajasthan",
-            "postalCode": "332001"
-          }
-        },
-        "experienceRequirements": {
-          "@type": "OccupationalExperienceRequirements",
-          "monthsOfExperience": 0
-        }
-      }
-    }))
+    "@type": "BeautySalon",
+    "name": "Naksh Salon",
+    "description": "Contact Naksh Salon Sikar for beauty services, nail training, and hair treatments in Rajasthan.",
+    "url": "https://nakshsalon.com/contact",
+    "telephone": "+91-8690900970",
+    "email": "naksh.sikar@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shri Yash Tower Road, Near Pawan Travels, Sikar",
+      "addressLocality": "Sikar",
+      "addressRegion": "Rajasthan",
+      "postalCode": "332001",
+      "addressCountry": "IN",
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "27.6094",
+      "longitude": "75.1399",
+    },
+    "openingHours": "Mo-Su 10:00-20:00",
   };
 
   return (
     <>
       <Helmet>
-        <title>Careers at Naksh Salon Sikar | Beauty Jobs & Training Programs Rajasthan</title>
+        <title>Contact Naksh Salon Sikar | Book Appointment & Inquiries</title>
         <meta
           name="description"
-          content="Join Naksh Unisex Salon Sikar - Career opportunities in beauty industry. Nail Services training, skin treatment courses, hair chemical programs in Rajasthan."
+          content="Get in touch with Naksh Salon Sikar, Rajasthan for appointments, beauty consultations, and training inquiries. Fill our quick contact form today!"
         />
         <meta
           name="keywords"
-          content="beauty jobs sikar, salon careers rajasthan, nail academy training, skin treatment courses, hair chemical programs, beauty industry jobs, naksh salon careers"
+          content="contact naksh salon, sikar beauty salon contact, naksh unisex salon phone number, salon near me, salon appointment sikar, hair & beauty services"
         />
-        <meta name="author" content="Naksh Unisex Salon" />
-        <link rel="canonical" href="https://nakshsalon.com/career" />
-        <meta property="og:title" content="Careers at Naksh Salon Sikar | Beauty Industry Jobs & Training" />
-        <meta property="og:description" content="Join Naksh Unisex Salon in Sikar - Career opportunities in Nail Services, skin treatment and hair chemical training programs." />
-        <meta property="og:url" content="https://nakshsalon.com/career" />
+        <meta name="author" content="Naksh Salon" />
+        <link rel="canonical" href="https://nakshsalon.com/contact" />
+        <meta property="og:title" content="Contact Naksh Salon Sikar | Beauty & Training Inquiries" />
+        <meta property="og:description" content="Contact Naksh Unisex Salon Sikar for salon appointments, nail training, or hair care services." />
+        <meta property="og:url" content="https://nakshsalon.com/contact" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Careers at Naksh Salon Sikar" />
-        <meta name="twitter:description" content="Beauty industry jobs and training programs at Naksh Unisex Salon in Sikar, Rajasthan." />
+        <meta name="twitter:title" content="Contact Naksh Unisex Salon Sikar" />
+        <meta name="twitter:description" content="Reach out to Naksh Unisex Salon for beauty services and salon training programs in Sikar." />
       </Helmet>
 
-      <script type="application/ld+json">
-        {JSON.stringify(jobPostingSchema)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
 
-      <section
-        className="bg-black text-[#d4af37] min-h-screen mt-10 py-16 px-6 md:px-20"
-        id="careers"
-        itemScope
-        itemType="https://schema.org/WebPage"
-      >
-        <meta itemProp="name" content="Careers - Naksh Unisex Salon Sikar" />
-        <meta itemProp="description" content="Career opportunities and training programs at Naksh Unisex Salon in Sikar, Rajasthan" />
-        
+      <section className="bg-black text-[#d4af37] min-h-screen py-16 px-6 md:px-20 mt-10">
         <motion.header
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#d4af37]" itemProp="headline">
-            Careers at Naksh Salon Sikar
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37]">Contact Naksh Salon</h1>
           <p className="text-gray-400 mt-3 max-w-2xl mx-auto text-lg">
-            Join Rajasthan's premier unisex salon in <strong>Sikar</strong>. Learn, grow, and 
-            build your career in the beauty industry with expert training and professional development.
+            Have questions or want to book an appointment? Fill the form below or reach out directly — we’d love to hear from you.
           </p>
         </motion.header>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          {/* Job Listings */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-6 text-[#d4af37]">
-              Current Openings in Sikar
-            </h2>
-            {jobs.map((job) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 hover:border-[#d4af37]/40 transition-all p-6 rounded-2xl mb-6 shadow-lg"
-                itemScope
-                itemType="https://schema.org/JobPosting"
-              >
-                <h3 className="text-xl font-semibold text-[#d4af37]" itemProp="title">
-                  {job.title}
-                </h3>
-                
-                <div className="flex flex-wrap gap-3 mt-2 text-sm text-gray-300">
-                  <span className="bg-[#d4af37]/20 px-2 py-1 rounded" itemProp="jobLocation">
-                    📍 {job.location}
-                  </span>
-                  <span className="bg-[#d4af37]/20 px-2 py-1 rounded" itemProp="employmentType">
-                    {job.type}
-                  </span>
-                  <span className="bg-[#d4af37]/20 px-2 py-1 rounded">
-                    {job.experience}
-                  </span>
-                </div>
-
-                <p className="text-gray-300 mt-3 text-sm md:text-base" itemProp="description">
-                  {job.desc}
-                </p>
-                
-                <button
-                  onClick={() => setApply((prev) => ({ ...prev, jobId: job.id }))}
-                  className="mt-4 bg-[#d4af37] text-black px-5 py-2 rounded-md font-medium hover:bg-[#c29d2d] transition-all"
-                  aria-label={`Apply for ${job.title} position`}
-                >
-                  Apply Now
-                </button>
-
-                <meta itemProp="datePosted" content="2024-12-01" />
-                <meta itemProp="hiringOrganization" content="Naksh Unisex Salon" />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Application Form */}
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+          {/* Contact Form */}
           <motion.form
-            onSubmit={handleApply}
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-black/40 backdrop-blur-md border h-130 border-[#d4af37]/20 p-6 rounded-2xl shadow-lg sticky top-24"
+            className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 p-6 rounded-2xl shadow-lg"
           >
-            <h2 className="text-2xl font-semibold text-[#d4af37] mb-5">
-              Apply for Beauty Career in Sikar
-            </h2>
-
-            <select
-              name="jobId"
-              value={apply.jobId}
-              onChange={handleChange}
-              required
-              disabled={apply.isSubmitting}
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
-              aria-label="Select Job Role"
-            >
-              <option value="">Select Training Program *</option>
-              {jobs.map((job) => (
-                <option key={job.id} value={job.id}>
-                  {job.title} - {job.location}
-                </option>
-              ))}
-            </select>
+            <h2 className="text-2xl font-semibold text-[#d4af37] mb-5">Get In Touch</h2>
 
             <input
               name="name"
-              value={apply.name}
+              value={form.name}
               onChange={handleChange}
               placeholder="Full Name *"
-              required
-              disabled={apply.isSubmitting}
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
-              aria-label="Your Full Name"
+              className="w-full p-3 mb-4 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
             />
 
             <input
               name="email"
               type="email"
-              value={apply.email}
+              value={form.email}
               onChange={handleChange}
               placeholder="Email Address *"
-              required
-              disabled={apply.isSubmitting}
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
-              aria-label="Your Email Address"
+              className="w-full p-3 mb-4 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
             />
 
             <input
               name="phone"
               type="tel"
-              value={apply.phone}
+              value={form.phone}
               onChange={handleChange}
               placeholder="Phone Number *"
-              required
-              disabled={apply.isSubmitting}
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
-              aria-label="Your Phone Number"
+              className="w-full p-3 mb-4 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
             />
 
-            {/* File Upload */}
-            <label className="block mb-4">
-              <span className="text-gray-300 text-sm mb-1 block">
-                Upload Resume (PDF/DOC/JPEG) *
-              </span>
-              <input
-                type="file"
-                onChange={handleFile}
-                required
-                disabled={apply.isSubmitting}
-                className="w-full file:mr-3 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-[#d4af37] file:text-black hover:file:bg-[#c29d2d] text-gray-200 cursor-pointer disabled:opacity-50"
-                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                aria-label="Upload your resume"
-              />
-              <small className="text-gray-400 text-xs mt-1">
-                Supported formats: PDF, DOC, JPEG, PNG (Max 10MB)
-              </small>
-            </label>
+            <select
+              name="gender"
+              value={form.gender}
+              onChange={handleChange}
+              className="w-full p-3 mb-4 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
+            >
+              <option value="">Select Gender *</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+
+            <input
+              name="age"
+              type="number"
+              value={form.age}
+              onChange={handleChange}
+              placeholder="Your Age *"
+              className="w-full p-3 mb-4 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
+            />
+
+            <input
+              name="location"
+              value={form.location}
+              onChange={handleChange}
+              placeholder="Your City / Location *"
+              className="w-full p-3 mb-6 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
+            />
 
             <button
               type="submit"
-              disabled={apply.isSubmitting}
-              className="w-full bg-[#d4af37] text-black py-3 rounded-md font-medium hover:bg-[#c29d2d] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-              aria-label="Submit job application"
+              disabled={form.isSubmitting}
+              className="w-full bg-[#d4af37] text-black py-3 rounded-md font-medium hover:bg-[#c29d2d] transition-all disabled:opacity-50"
             >
-              {apply.isSubmitting ? (
-                <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-black"></div>
-                  Sending...
-                </>
-              ) : (
-                "Submit Application"
-              )}
+              {form.isSubmitting ? "Sending..." : "Submit"}
             </button>
 
-            {apply.msg && (
-              <p className={`text-sm mt-4 text-center ${
-                apply.msg.includes('✅') ? 'text-green-400' : 
-                apply.msg.includes('❌') ? 'text-red-400' : 
-                apply.msg.includes('⚠️') ? 'text-yellow-400' : 'text-gray-300'
-              }`}>
-                {apply.msg}
+            {form.msg && (
+              <p
+                className={`text-sm mt-4 text-center ${
+                  form.msg.includes("✅")
+                    ? "text-green-400"
+                    : form.msg.includes("❌")
+                    ? "text-red-400"
+                    : "text-yellow-400"
+                }`}
+              >
+                {form.msg}
               </p>
             )}
           </motion.form>
-        </div>
 
-        {/* Benefits Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-white/5 border border-[#d4af37]/20 rounded-2xl p-8 max-w-4xl mx-auto"
-        >
-          <h2 className="text-2xl font-semibold text-[#d4af37] mb-6 text-center">
-            Why Join Naksh Salon Sikar?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 text-gray-300">
-            <div className="text-center">
-              <h3 className="font-semibold text-[#d4af37] mb-2">Expert Training</h3>
-              <p>Learn from certified professionals in Sikar's best salon environment</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-[#d4af37] mb-2">Career Growth</h3>
-              <p>Opportunities for advancement in Rajasthan's beauty industry</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-[#d4af37] mb-2">Modern Facilities</h3>
-              <p>Work with latest equipment and premium products in Sikar</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-[#d4af37] mb-2">Supportive Team</h3>
-              <p>Join a collaborative environment that values your growth</p>
-            </div>
-          </div>
-        </motion.div>
+          {/* Contact Info + Map */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 p-6 rounded-2xl shadow-lg"
+          >
+            <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Our Salon</h2>
+            <p className="text-gray-300 mb-2">
+              <strong>Naksh Salon</strong>
+            </p>
+            <p className="text-gray-300 mb-2">📞 +91-8690900970, 7877705277</p>
+            <p className="text-gray-300 mb-6">✉️ naksh.sikar@gmail.com</p>
 
-        <div className="mt-12 text-center text-gray-400 text-sm max-w-2xl mx-auto">
-          <p className="text-lg">
-            Build your beauty career with <strong>Naksh Unisex Salon Sikar</strong> - 
-            Rajasthan's leading salon for <strong>Nail Services training</strong>,{" "}
-            <strong>skin treatment programs</strong>, and{" "}
-            <strong>hair chemical courses</strong>. Start your journey in Sikar's 
-            most professional beauty environment today.
-          </p>
+            <iframe
+              title="Naksh Salon Sikar Location"
+              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Shri Yash Tower Road, Sikar&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="100%"
+              height="300"
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-lg border border-[#d4af37]/20"
+            ></iframe>
+          </motion.div>
         </div>
       </section>
     </>
