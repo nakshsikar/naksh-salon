@@ -156,7 +156,7 @@ Sent via Naksh Unisex Salon Website - ${currentYear}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 p-6 rounded-2xl shadow-lg"
+            className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 p-2 rounded-2xl shadow-lg"
           >
             <h2 className="text-2xl font-semibold text-[#d4af37] mb-5">Get In Touch</h2>
 
@@ -242,7 +242,7 @@ Sent via Naksh Unisex Salon Website - ${currentYear}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 p-6 rounded-2xl shadow-lg"
+            className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 p-2 rounded-2xl shadow-lg"
           >
             <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Our Salon</h2>
             <p className="text-gray-300 mb-2">
