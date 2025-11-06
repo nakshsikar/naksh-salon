@@ -29,20 +29,20 @@ export default function MovingGallerySection() {
     },
     {
       src: "nail-art2.png",
-      alt: "Nail Services designs at Naksh Salon Sikar - Creative nail services Rajasthan",
-      title: "Nail Services"
+      alt: "Nail art designs at Naksh Salon Sikar - Creative nail services Rajasthan",
+      title: "Nail Art"
     }
   ];
 
   const imagesRow2 = [
     {
       src: "/6.webp",
-      alt: "Spa and relaxation services at Naksh Unisex Salon Sikar - Body massage treatments",
+      alt: "Nail art services at Naksh Unisex Salon Sikar - Creative nail designs and treatments",
       title: "Nail Services"
     },
     {
       src: "/7.jpg",
-      alt: "Hair spa treatment at Naksh Salon - Hair care and conditioning services Sikar",
+      alt: "Hair spa treatment at Naksh Salon Sikar - Hair care and conditioning services",
       title: "Hair Spa"
     },
     {
@@ -57,7 +57,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "/10.jpg",
-      alt: "Beauty services at Naksh Unisex Salon - Complete beauty treatments Sikar",
+      alt: "Beauty services at Naksh Unisex Salon Sikar - Complete beauty treatments",
       title: "Beauty Services"
     },
     {
@@ -72,7 +72,7 @@ export default function MovingGallerySection() {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
     "name": "Naksh Unisex Salon Gallery - Beauty Services in Sikar",
-    "description": "Gallery showcasing hair styling, bridal makeup, facial treatments, Nail Services and beauty treatments at Naksh Unisex Salon in Sikar, Rajasthan",
+    "description": "Gallery showcasing hair styling, bridal makeup, facial treatments, nail art and beauty treatments at Naksh Unisex Salon in Sikar, Rajasthan",
     "url": "https://nakshsalon.com",
     "mainEntity": {
       "@type": "BeautySalon",
@@ -109,7 +109,7 @@ export default function MovingGallerySection() {
         <meta itemProp="description" content="Gallery of hair, makeup and beauty services at Naksh Unisex Salon Sikar" />
         
         {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#111111]/60 to-black pointer-events-none"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#111111]/60 to-black pointer-events-none"></div>
 
         {/* SEO Optimized Title */}
         <div className="relative z-10 text-center mb-16 px-4">
@@ -124,7 +124,7 @@ export default function MovingGallerySection() {
 
         {/* Row 1 - Left to Right */}
         <motion.div
-          className="flex gap-6 w-max mb-8"
+          className="flex gap-4 w-max mb-6"
           initial={{ x: "-50%" }}
           animate={{ x: "0%" }}
           transition={{
@@ -138,7 +138,12 @@ export default function MovingGallerySection() {
           {[...imagesRow1, ...imagesRow1].map((img, i) => (
             <div
               key={`row1-${i}`}
-              className="glass-card overflow-hidden rounded-2xl min-w-[300px] h-[200px] relative"
+              className="shrink-0 rounded-2xl overflow-hidden bg-white/5 border border-[#d4af37]/20"
+              style={{
+                width: '280px',
+                height: '180px',
+                flex: '0 0 auto'
+              }}
               itemScope
               itemType="https://schema.org/ImageObject"
             >
@@ -150,9 +155,14 @@ export default function MovingGallerySection() {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover"
                 loading="lazy"
                 itemProp="contentUrl"
+                style={{
+                  maxWidth: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
               />
             </div>
           ))}
@@ -160,7 +170,7 @@ export default function MovingGallerySection() {
 
         {/* Row 2 - Right to Left */}
         <motion.div
-          className="flex gap-6 w-max"
+          className="flex gap-4 w-max"
           initial={{ x: "0%" }}
           animate={{ x: "-50%" }}
           transition={{
@@ -174,7 +184,12 @@ export default function MovingGallerySection() {
           {[...imagesRow2, ...imagesRow2].map((img, i) => (
             <div
               key={`row2-${i}`}
-              className="glass-card overflow-hidden rounded-2xl min-w-[300px] h-[200px] relative"
+              className="shrink-0 rounded-2xl overflow-hidden bg-white/5 border border-[#d4af37]/20"
+              style={{
+                width: '280px',
+                height: '180px',
+                flex: '0 0 auto'
+              }}
               itemScope
               itemType="https://schema.org/ImageObject"
             >
@@ -186,9 +201,14 @@ export default function MovingGallerySection() {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover"
                 loading="lazy"
                 itemProp="contentUrl"
+                style={{
+                  maxWidth: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
               />
             </div>
           ))}
@@ -202,7 +222,7 @@ export default function MovingGallerySection() {
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
               At <strong>Naksh Unisex Salon Sikar</strong>, we specialize in professional 
-              <strong> hair styling, bridal makeup, facial treatments, nail services</strong> and 
+              <strong> hair styling, bridal makeup, facial treatments, nail art services</strong> and 
               complete beauty solutions for both men and women. Our gallery showcases the 
               quality and excellence we deliver to every client in <strong>Rajasthan</strong>.
             </p>
@@ -211,15 +231,28 @@ export default function MovingGallerySection() {
               <span>✅ Bridal Makeup</span>
               <span>✅ Facial Treatments</span>
               <span>✅ Hair Coloring</span>
-              <span>✅ Nail Services</span>
+              <span>✅ Nail Art Services</span>
               <span>✅ Beard Trimming</span>
             </div>
           </div>
         </div>
 
-        {/* Performance Optimization - Preload critical images */}
-        <link rel="preload" as="image" href={imagesRow1[0].src} />
-        <link rel="preload" as="image" href={imagesRow2[0].src} />
+        {/* Mobile Responsive Styles */}
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .flex-shrink-0 {
+              width: 250px !important;
+              height: 160px !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .flex-shrink-0 {
+              width: 220px !important;
+              height: 140px !important;
+            }
+          }
+        `}</style>
       </section>
     </>
   );
