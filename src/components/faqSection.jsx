@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -47,7 +48,7 @@ export default function FAQSection() {
     },
   ];
 
-  // ✅ SEO Schema for FAQ
+  // ✅ Correct JSON-LD Schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -67,17 +68,13 @@ export default function FAQSection() {
 
   return (
     <>
-      <script type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </script>
+      <Helmet>
+        {/* ✅ Inject structured data for SEO */}
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
 
-      <section
-        id="faq"
-        className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden"
-        itemScope
-        itemType="https://schema.org/FAQPage"
-      >
-        {/* Subtle gradient background */}
+      <section className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-black opacity-80"></div>
 
         {/* Heading */}
@@ -108,16 +105,10 @@ export default function FAQSection() {
               viewport={{ once: true }}
               onClick={() => toggleFAQ(index)}
               className="group bg-white/5 backdrop-blur-md border border-[#d4af37]/20 hover:border-[#d4af37]/50 rounded-2xl p-5 sm:p-6 cursor-pointer transition-all shadow-md hover:shadow-lg"
-              itemScope
-              itemProp="mainEntity"
-              itemType="https://schema.org/Question"
             >
               {/* Question */}
               <div className="flex justify-between items-center">
-                <h3
-                  className="text-base sm:text-lg md:text-xl font-semibold text-white leading-snug tracking-wide pr-4 flex-1"
-                  itemProp="name"
-                >
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white leading-snug tracking-wide pr-4 flex-1">
                   {faq.question}
                 </h3>
                 <span
@@ -138,14 +129,8 @@ export default function FAQSection() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
-                    itemScope
-                    itemProp="acceptedAnswer"
-                    itemType="https://schema.org/Answer"
                   >
-                    <p
-                      className="text-gray-300 mt-3 text-sm sm:text-base leading-relaxed"
-                      itemProp="text"
-                    >
+                    <p className="text-gray-300 mt-3 text-sm sm:text-base leading-relaxed">
                       {faq.answer}
                     </p>
                   </motion.div>
