@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from "react-helmet";
 
 const jobs = [
@@ -29,30 +29,46 @@ const jobs = [
   },
 ];
 
+// WhatsApp Configuration
+const WHATSAPP_NUMBER = "918690900970"; // Your WhatsApp number with country code
+
 export default function Career() {
   const [apply, setApply] = useState({
     jobId: "",
     name: "",
     email: "",
     phone: "",
-    resume: null,
     msg: null,
+    isSubmitting: false,
   });
+
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e) =>
     setApply({ ...apply, [e.target.name]: e.target.value });
-  const handleFile = (e) =>
-    setApply({ ...apply, resume: e.target.files[0] });
+
+  const openPopup = (jobId) => {
+    setApply(prev => ({ ...prev, jobId, msg: null }));
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+    setApply({
+      jobId: "",
+      name: "",
+      email: "",
+      phone: "",
+      msg: null,
+      isSubmitting: false,
+    });
+  };
 
   const handleApply = (e) => {
     e.preventDefault();
-    if (
-      !apply.jobId ||
-      !apply.name ||
-      !apply.email ||
-      !apply.phone ||
-      !apply.resume
-    ) {
+    
+    // Validation
+    if (!apply.jobId || !apply.name || !apply.email || !apply.phone) {
       setApply((prev) => ({
         ...prev,
         msg: "⚠️ Please fill out all required fields before submitting.",
@@ -60,10 +76,60 @@ export default function Career() {
       return;
     }
 
-    setApply((prev) => ({
-      ...prev,
-      msg: "✅ Application submitted successfully! We'll get in touch soon.",
-    }));
+    setApply((prev) => ({ ...prev, isSubmitting: true, msg: "📱 Opening WhatsApp..." }));
+
+    try {
+      // Get selected job details
+      const selectedJob = jobs.find(job => job.id === apply.jobId);
+
+      // Create WhatsApp message
+      const message = `🚀 *NEW CAREER APPLICATION - NAKSH SALON SIKAR* 🚀
+
+*Applicant Information:*
+📛 *Full Name:* ${apply.name}
+📧 *Email:* ${apply.email}
+📞 *Phone:* ${apply.phone}
+
+*Application Details:*
+🎯 *Training Program:* ${selectedJob?.title}
+📍 *Location:* ${selectedJob?.location}
+📋 *Program Type:* ${selectedJob?.type}
+💼 *Experience Level:* ${selectedJob?.experience}
+
+*Additional Information:*
+I'm interested in joining the ${selectedJob?.title} program at Naksh Salon Sikar. Please contact me for more details about the application process.
+
+_This application was submitted via Naksh Salon Website_`;
+
+      // Encode message for WhatsApp URL
+      const encodedMessage = encodeURIComponent(message);
+      
+      // Create WhatsApp URL
+      const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+      
+      // Show success message
+      setApply((prev) => ({
+        ...prev,
+        isSubmitting: false,
+        msg: "✅ WhatsApp opened! Please send the pre-filled message to complete your application.",
+      }));
+
+      // Auto close popup after 3 seconds
+      setTimeout(() => {
+        closePopup();
+      }, 3000);
+
+    } catch (error) {
+      console.error('WhatsApp Error:', error);
+      setApply((prev) => ({
+        ...prev,
+        isSubmitting: false,
+        msg: "❌ Failed to open WhatsApp. Please try again or contact us directly.",
+      }));
+    }
   };
 
   // Structured Data for Job Postings
@@ -108,7 +174,6 @@ export default function Career() {
 
   return (
     <>
-      {/* ✅ Enhanced SEO Meta Tags */}
       <Helmet>
         <title>Careers at Naksh Salon Sikar | Beauty Jobs & Training Programs Rajasthan</title>
         <meta
@@ -120,22 +185,15 @@ export default function Career() {
           content="beauty jobs sikar, salon careers rajasthan, nail academy training, skin treatment courses, hair chemical programs, beauty industry jobs, naksh salon careers"
         />
         <meta name="author" content="Naksh Unisex Salon" />
-        
-        {/* Canonical URL */}
         <link rel="canonical" href="https://nakshsalon.com/career" />
-        
-        {/* Open Graph Tags */}
         <meta property="og:title" content="Careers at Naksh Salon Sikar | Beauty Industry Jobs & Training" />
         <meta property="og:description" content="Join Naksh Unisex Salon in Sikar - Career opportunities in Nail Services, skin treatment and hair chemical training programs." />
         <meta property="og:url" content="https://nakshsalon.com/career" />
         <meta property="og:type" content="website" />
-        
-        {/* Twitter Card */}
         <meta name="twitter:title" content="Careers at Naksh Salon Sikar" />
         <meta name="twitter:description" content="Beauty industry jobs and training programs at Naksh Unisex Salon in Sikar, Rajasthan." />
       </Helmet>
 
-      {/* Structured Data for SEO */}
       <script type="application/ld+json">
         {JSON.stringify(jobPostingSchema)}
       </script>
@@ -165,147 +223,62 @@ export default function Career() {
           </p>
         </motion.header>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          {/* Job Listings */}
+        <div className="max-w-6xl mx-auto">
+          {/* Job Listings - Full Width Now */}
           <div>
             <h2 className="text-2xl font-semibold mb-6 text-[#d4af37]">
               Current Openings in Sikar
             </h2>
-            {jobs.map((job) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 hover:border-[#d4af37]/40 transition-all p-6 rounded-2xl mb-6 shadow-lg"
-                itemScope
-                itemType="https://schema.org/JobPosting"
-              >
-                <h3 className="text-xl font-semibold text-[#d4af37]" itemProp="title">
-                  {job.title}
-                </h3>
-                
-                {/* Job Meta Info */}
-                <div className="flex flex-wrap gap-3 mt-2 text-sm text-gray-300">
-                  <span className="bg-[#d4af37]/20 px-2 py-1 rounded" itemProp="jobLocation">
-                    📍 {job.location}
-                  </span>
-                  <span className="bg-[#d4af37]/20 px-2 py-1 rounded" itemProp="employmentType">
-                    {job.type}
-                  </span>
-                  <span className="bg-[#d4af37]/20 px-2 py-1 rounded">
-                    {job.experience}
-                  </span>
-                </div>
-
-                <p className="text-gray-300 mt-3 text-sm md:text-base" itemProp="description">
-                  {job.desc}
-                </p>
-                
-                <button
-                  onClick={() => setApply((prev) => ({ ...prev, jobId: job.id }))}
-                  className="mt-4 bg-[#d4af37] text-black px-5 py-2 rounded-md font-medium hover:bg-[#c29d2d] transition-all"
-                  aria-label={`Apply for ${job.title} position`}
-                >
-                  Apply Now
-                </button>
-
-                {/* Hidden SEO Metadata */}
-                <meta itemProp="datePosted" content="2024-12-01" />
-                <meta itemProp="hiringOrganization" content="Naksh Unisex Salon" />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Application Form */}
-          <motion.form
-            onSubmit={handleApply}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-black/40 backdrop-blur-md border h-130 border-[#d4af37]/20 p-6 rounded-2xl shadow-lg sticky top-24"
-          >
-            <h2 className="text-2xl font-semibold text-[#d4af37] mb-5">
-              Apply for Beauty Career in Sikar
-            </h2>
-
-            <select
-              name="jobId"
-              value={apply.jobId}
-              onChange={handleChange}
-              required
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
-              aria-label="Select Job Role"
-            >
-              <option value="">Select Training Program *</option>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {jobs.map((job) => (
-                <option key={job.id} value={job.id}>
-                  {job.title} - {job.location}
-                </option>
+                <motion.div
+                  key={job.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-black/40 backdrop-blur-md border border-[#d4af37]/20 hover:border-[#d4af37]/40 transition-all p-6 rounded-2xl shadow-lg flex flex-col h-full"
+                  itemScope
+                  itemType="https://schema.org/JobPosting"
+                >
+                  <h3 className="text-xl font-semibold text-[#d4af37] mb-3" itemProp="title">
+                    {job.title}
+                  </h3>
+                  
+                  {/* Job Meta Info */}
+                  <div className="flex flex-wrap gap-2 mb-3 text-sm text-gray-300">
+                    <span className="bg-[#d4af37]/20 px-2 py-1 rounded text-xs" itemProp="jobLocation">
+                      📍 {job.location}
+                    </span>
+                    <span className="bg-[#d4af37]/20 px-2 py-1 rounded text-xs" itemProp="employmentType">
+                      {job.type}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-300 text-sm mb-4 flex-grow" itemProp="description">
+                    {job.desc}
+                  </p>
+
+                  <div className="mt-auto">
+                    <span className="bg-[#d4af37]/20 px-2 py-1 rounded text-xs text-gray-300 block mb-3">
+                      {job.experience}
+                    </span>
+                    
+                    <button
+                      onClick={() => openPopup(job.id)}
+                      className="w-full bg-[#d4af37] text-black px-4 py-2 rounded-md font-medium hover:bg-[#c29d2d] transition-all text-sm"
+                      aria-label={`Apply for ${job.title} position`}
+                    >
+                      Apply Now
+                    </button>
+                  </div>
+
+                  {/* Hidden SEO Metadata */}
+                  <meta itemProp="datePosted" content="2024-12-01" />
+                  <meta itemProp="hiringOrganization" content="Naksh Unisex Salon" />
+                </motion.div>
               ))}
-            </select>
-
-            <input
-              name="name"
-              value={apply.name}
-              onChange={handleChange}
-              placeholder="Full Name *"
-              required
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
-              aria-label="Your Full Name"
-            />
-
-            <input
-              name="email"
-              type="email"
-              value={apply.email}
-              onChange={handleChange}
-              placeholder="Email Address *"
-              required
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
-              aria-label="Your Email Address"
-            />
-
-            <input
-              name="phone"
-              type="tel"
-              value={apply.phone}
-              onChange={handleChange}
-              placeholder="Phone Number *"
-              required
-              className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none"
-              aria-label="Your Phone Number"
-            />
-
-            {/* File Upload */}
-            <label className="block mb-4">
-              <span className="text-gray-300 text-sm mb-1 block">
-                Upload Resume (PDF/DOC) *
-              </span>
-              <input
-                type="file"
-                onChange={handleFile}
-                required
-                className="w-full file:mr-3 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-[#d4af37] file:text-black hover:file:bg-[#c29d2d] text-gray-200 cursor-pointer"
-                accept=".pdf,.doc,.docx"
-                aria-label="Upload your resume"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="w-full bg-[#d4af37] text-black py-3 rounded-md font-medium hover:bg-[#c29d2d] transition-all"
-              aria-label="Submit job application"
-            >
-              Submit Application
-            </button>
-
-            {apply.msg && (
-              <p className="text-sm mt-4 text-gray-300 text-center">
-                {apply.msg}
-              </p>
-            )}
-          </motion.form>
+            </div>
+          </div>
         </div>
 
         {/* Benefits Section for SEO */}
@@ -349,6 +322,130 @@ export default function Career() {
           </p>
         </div>
       </section>
+
+      {/* Popup Modal */}
+      <AnimatePresence>
+        {showPopup && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              onClick={closePopup}
+            >
+              {/* Modal */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                className="bg-gradient-to-br from-black to-gray-900 border border-[#d4af37]/30 rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Header */}
+                <div className="border-b border-[#d4af37]/20 p-6">
+                  <div className="flex justify-between items-center">
+                    <h2 className="text-2xl font-bold text-[#d4af37]">
+                      Apply via WhatsApp
+                    </h2>
+                    <button
+                      onClick={closePopup}
+                      className="text-gray-400 hover:text-[#d4af37] transition-all text-2xl font-bold"
+                      aria-label="Close modal"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <p className="text-gray-300 text-sm mt-2">
+                    {jobs.find(job => job.id === apply.jobId)?.title} - Sikar
+                  </p>
+                </div>
+
+                {/* Form */}
+                <form onSubmit={handleApply} className="p-6">
+                  <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-md">
+                    <p className="text-green-300 text-sm text-center">
+                      📱 After filling this form, we'll review the details it may take 24Hrs. <br />Just click send!
+                    </p>
+                  </div>
+
+                  <input
+                    name="name"
+                    value={apply.name}
+                    onChange={handleChange}
+                    placeholder="Full Name *"
+                    required
+                    disabled={apply.isSubmitting}
+                    className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
+                    aria-label="Your Full Name"
+                  />
+
+                  <input
+                    name="email"
+                    type="email"
+                    value={apply.email}
+                    onChange={handleChange}
+                    placeholder="Email Address *"
+                    required
+                    disabled={apply.isSubmitting}
+                    className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
+                    aria-label="Your Email Address"
+                  />
+
+                  <input
+                    name="phone"
+                    type="tel"
+                    value={apply.phone}
+                    onChange={handleChange}
+                    placeholder="Phone Number *"
+                    required
+                    disabled={apply.isSubmitting}
+                    className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4 focus:ring-2 focus:ring-[#d4af37]/40 outline-none disabled:opacity-50"
+                    aria-label="Your Phone Number"
+                  />
+
+                  {/* Note about resume */}
+                  <div className="mb-6 p-3 bg-blue-900/20 border border-blue-500/30 rounded-md">
+                    <p className="text-blue-300 text-xs text-center">
+                      💡 <strong>Resume Note:</strong> After sending the WhatsApp message, you can share your resume file directly in the same chat.
+                    </p>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={apply.isSubmitting}
+                    className="w-full bg-green-600 text-white py-3 rounded-md font-medium hover:bg-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    aria-label="Submit application via WhatsApp"
+                  >
+                    {apply.isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        Opening WhatsApp...
+                      </>
+                    ) : (
+                      <>
+                        <span>📱</span>
+                        Send via WhatsApp
+                      </>
+                    )}
+                  </button>
+
+                  {apply.msg && (
+                    <p className={`text-sm mt-4 text-center ${
+                      apply.msg.includes('✅') ? 'text-green-400' : 
+                      apply.msg.includes('❌') ? 'text-red-400' : 
+                      apply.msg.includes('⚠️') ? 'text-yellow-400' : 'text-gray-300'
+                    }`}>
+                      {apply.msg}
+                    </p>
+                  )}
+                </form>
+              </motion.div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }
