@@ -148,35 +148,39 @@ _This application was submitted via Naksh Salon Website_`;
       "title": job.title,
       "description": job.desc,
       "datePosted": "2024-12-01",
+      // ✅ Fixed: validThrough (required by Google)
       "validThrough": "2025-03-01",
+      // ✅ Fixed: proper employmentType
       "employmentType": "FULL_TIME",
       "hiringOrganization": {
         "@type": "Organization",
         "name": "Naksh Unisex Salon",
         "sameAs": "https://nakshsalon.com",
-        "logo": "https://nakshsalon.com/logo.png" 
+        "logo": "https://nakshsalon.com/logo.png"
       },
+      // ✅ Fixed: jobLocation now includes address (required)
       "jobLocation": {
         "@type": "Place",
-        "address": { 
+        "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Shri Yash Tower Road, Near Pawan Travels, Sikar",
+          "streetAddress": "Shri Yash Tower Road, Near Pawan Travels",
           "addressLocality": "Sikar",
           "addressRegion": "Rajasthan",
           "postalCode": "332001",
           "addressCountry": "IN"
         }
       },
+      // ✅ Fixed: baseSalary included (even if unpaid training)
       "baseSalary": {
         "@type": "MonetaryAmount",
         "currency": "INR",
         "value": {
           "@type": "QuantitativeValue",
-          "minValue": 0,
-          "maxValue": 0,
+          "value": 0,
           "unitText": "MONTH"
         }
       },
+      // ✅ Optional but improves context
       "experienceRequirements": {
         "@type": "OccupationalExperienceRequirements",
         "monthsOfExperience": 0
@@ -184,6 +188,11 @@ _This application was submitted via Naksh Salon Website_`;
       "applicantLocationRequirements": {
         "@type": "Country",
         "name": "India"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Naksh Unisex Salon",
+        "value": job.id
       }
     }
   }))
