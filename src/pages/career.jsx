@@ -229,24 +229,38 @@ _This application was submitted via Naksh Salon Website_`;
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
               className="bg-gradient-to-br from-black to-gray-900 border border-[#d4af37]/30 rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}>
+              
               <div className="border-b border-[#d4af37]/20 p-6 flex justify-between items-center">
                 <h2 className="text-2xl font-bold text-[#d4af37]">Apply via WhatsApp</h2>
                 <button onClick={closePopup} className="text-gray-400 hover:text-[#d4af37] text-2xl font-bold">×</button>
               </div>
+
+              {/* ✅ New confirmation message at top */}
+              <div className="bg-[#d4af37]/10 text-gray-300 text-sm text-center px-6 py-3 border-b border-[#d4af37]/20">
+                📩 We’ve received your message. Our team will review it and respond within <strong>24–48 hours</strong>.
+              </div>
+
               <form onSubmit={handleApply} className="p-6">
                 <input name="name" value={apply.name} onChange={handleChange} placeholder="Full Name *" required className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4"/>
                 <input name="email" type="email" value={apply.email} onChange={handleChange} placeholder="Email Address *" required className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-4"/>
                 <input name="phone" type="tel" value={apply.phone} onChange={handleChange} placeholder="Phone Number *" required className="w-full p-3 bg-black/50 border border-[#d4af37]/20 rounded-md text-gray-200 mb-6"/>
+
                 <button type="submit" disabled={apply.isSubmitting}
                   className="w-full bg-green-600 text-white py-3 rounded-md font-medium hover:bg-green-700 transition-all disabled:opacity-50 flex justify-center gap-2">
                   {apply.isSubmitting ? "Opening WhatsApp..." : "📱 Send via WhatsApp"}
                 </button>
+
                 {apply.msg && (
                   <p className={`text-sm mt-4 text-center ${
                     apply.msg.includes("✅") ? "text-green-400" : 
                     apply.msg.includes("⚠️") ? "text-yellow-400" : "text-gray-300"
                   }`}>{apply.msg}</p>
                 )}
+
+                {/* ✅ Resume reminder below form */}
+                <p className="mt-6 text-gray-400 text-xs text-center border-t border-[#d4af37]/10 pt-3 italic">
+                  📄 When visiting our salon, please bring a copy of your updated resume.
+                </p>
               </form>
             </motion.div>
           </motion.div>
