@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Helmet } from "react-helmet";
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -8,50 +7,58 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "What beauty services does Naksh Salon Sikar offer?",
-      answer: "Naksh Unisex Salon in Sikar offers complete beauty and grooming services including professional haircuts, bridal makeup, facial treatments, Nail Services, hair coloring, Nail Services, beard grooming, and complete beauty solutions for both men and women in Rajasthan.",
+      answer:
+        "Naksh Unisex Salon in Sikar offers complete beauty and grooming services including professional haircuts, bridal makeup, facial treatments, nail art services, hair coloring, nail extensions, beard grooming, and complete beauty solutions for both men and women in Rajasthan.",
     },
     {
       question: "Do I need to book an appointment in advance at Naksh Salon Sikar?",
-      answer: "Yes, we recommend booking your appointment in advance to ensure your preferred time slot with our expert stylists in Sikar. This is especially important for bridal makeup, special occasions, and weekend appointments at our Rajasthan salon.",
+      answer:
+        "Yes, we recommend booking your appointment in advance to ensure your preferred time slot with our expert stylists in Sikar. This is especially important for bridal makeup, special occasions, and weekend appointments at our Rajasthan salon.",
     },
     {
       question: "Are your beauty products safe for all skin types in Sikar?",
-      answer: "Absolutely! At Naksh Salon Sikar, we use only premium, dermatologically-tested products suitable for all skin types. Our products are carefully selected to ensure safety, quality, and complete satisfaction for our clients in Rajasthan.",
+      answer:
+        "Absolutely! At Naksh Salon Sikar, we use only premium, dermatologically-tested products suitable for all skin types. Our products are carefully selected to ensure safety, quality, and complete satisfaction for our clients in Rajasthan.",
     },
     {
       question: "Do you provide bridal makeup packages for Sikar weddings?",
-      answer: "Yes! We specialize in customized bridal makeup packages for Sikar weddings. Our packages include pre-bridal consultations, trial sessions, complete bridal makeup, hairstyling, and traditional Rajasthani wedding looks to make your special day unforgettable.",
+      answer:
+        "Yes! We specialize in customized bridal makeup packages for Sikar weddings. Our packages include pre-bridal consultations, trial sessions, complete bridal makeup, hairstyling, and traditional Rajasthani wedding looks to make your special day unforgettable.",
     },
     {
       question: "Can I get a personalized beauty consultation at Naksh Salon Sikar?",
-      answer: "Of course! Our certified stylists in Sikar provide personalized consultations to understand your needs, skin type, and preferences. We suggest the best beauty treatments and styles that suit your personality and lifestyle in Rajasthan.",
+      answer:
+        "Of course! Our certified stylists in Sikar provide personalized consultations to understand your needs, skin type, and preferences. We suggest the best beauty treatments and styles that suit your personality and lifestyle in Rajasthan.",
     },
     {
       question: "What are the salon timings at Naksh Unisex Salon Sikar?",
-      answer: "Naksh Unisex Salon in Sikar is open from 10:00 AM to 8:00 PM, all days of the week including Sundays and holidays. We're conveniently located in Sikar, Rajasthan to serve your beauty needs.",
+      answer:
+        "Naksh Unisex Salon in Sikar is open from 10:00 AM to 8:00 PM, all days of the week including Sundays and holidays. We're conveniently located in Sikar, Rajasthan to serve your beauty needs.",
     },
     {
       question: "Do you offer men's grooming services in Sikar?",
-      answer: "Yes, we offer complete men's grooming services including haircuts, beard styling, facial treatments, hair coloring, and Nail Services. Naksh Salon is the preferred unisex salon for men's grooming in Sikar, Rajasthan.",
+      answer:
+        "Yes, we offer complete men's grooming services including haircuts, beard styling, facial treatments, hair coloring, and nail care services. Naksh Salon is the preferred unisex salon for men's grooming in Sikar, Rajasthan.",
     },
     {
       question: "What makes Naksh Salon the best beauty salon in Sikar?",
-      answer: "Naksh Unisex Salon stands out in Sikar due to our certified experts, premium products, modern techniques, hygienic environment, personalized service, and affordable pricing. We're committed to making you look and feel your best in Rajasthan.",
-    }
+      answer:
+        "Naksh Unisex Salon stands out in Sikar due to our certified experts, premium products, modern techniques, hygienic environment, personalized service, and affordable pricing. We're committed to making you look and feel your best in Rajasthan.",
+    },
   ];
 
-  // Structured Data for FAQ Page
+  // ✅ SEO Schema for FAQ
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
+      name: faq.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+        text: faq.answer,
+      },
+    })),
   };
 
   const toggleFAQ = (index) => {
@@ -60,80 +67,83 @@ export default function FAQSection() {
 
   return (
     <>
-      {/* FAQ Schema Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(faqSchema)}
       </script>
 
       <section
         id="faq"
-        className="relative w-full bg-black py-16 px-6 md:px-20 text-[#d4af37] overflow-hidden"
+        className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden"
         itemScope
         itemType="https://schema.org/FAQPage"
       >
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#111]/60 to-black pointer-events-none"></div>
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-black opacity-80"></div>
 
-        {/* Heading with Local SEO */}
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="relative z-10 text-center mb-14"
+          className="relative z-10 text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-            Frequently Asked Questions - Naksh Salon Sikar
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 tracking-wide">
+            Frequently Asked Questions
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Get answers to common questions about our beauty services in <strong>Sikar, Rajasthan</strong>
+          <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
+            Get answers to common questions about our beauty services in{" "}
+            <strong>Sikar, Rajasthan</strong>
           </p>
         </motion.div>
 
-        {/* FAQ List */}
-        <div className="relative z-10 max-w-4xl mx-auto space-y-6">
+        {/* FAQ Grid */}
+        <div className="relative z-10 max-w-5xl mx-auto grid gap-4">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-[#d4af37]/20 rounded-2xl p-6 cursor-pointer hover:border-[#d4af37]/40 transition-all"
               onClick={() => toggleFAQ(index)}
+              className="group bg-white/5 backdrop-blur-md border border-[#d4af37]/20 hover:border-[#d4af37]/50 rounded-2xl p-5 sm:p-6 cursor-pointer transition-all shadow-md hover:shadow-lg"
               itemScope
               itemProp="mainEntity"
               itemType="https://schema.org/Question"
             >
+              {/* Question */}
               <div className="flex justify-between items-center">
-                <h3 
-                  className="text-lg md:text-xl font-semibold text-white pr-4"
+                <h3
+                  className="text-base sm:text-lg md:text-xl font-semibold text-white leading-snug tracking-wide pr-4 flex-1"
                   itemProp="name"
                 >
                   {faq.question}
                 </h3>
                 <span
-                  className={`text-2xl transition-transform duration-300 flex-shrink-0 ${
-                    activeIndex === index ? "rotate-45" : "rotate-0"
+                  className={`text-2xl font-bold text-[#d4af37] transform transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-45" : ""
                   }`}
                 >
                   +
                 </span>
               </div>
 
+              {/* Answer */}
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
                     itemScope
                     itemProp="acceptedAnswer"
                     itemType="https://schema.org/Answer"
                   >
-                    <p 
-                      className="text-gray-300 mt-4 leading-relaxed text-lg"
+                    <p
+                      className="text-gray-300 mt-3 text-sm sm:text-base leading-relaxed"
                       itemProp="text"
                     >
                       {faq.answer}
@@ -145,26 +155,25 @@ export default function FAQSection() {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call To Action */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="relative z-10 text-center mt-12"
+          className="relative z-10 text-center mt-16"
         >
-          <div className="bg-white/5 backdrop-blur-sm border border-[#d4af37]/20 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold text-[#d4af37] mb-4">
+          <div className="bg-white/5 border border-[#d4af37]/20 rounded-2xl p-8 max-w-2xl mx-auto backdrop-blur-md shadow-lg">
+            <h3 className="text-2xl font-semibold text-[#d4af37] mb-3">
               Still Have Questions?
             </h3>
-            <p className="text-gray-300 mb-6">
-              Contact Naksh Unisex Salon in Sikar directly for personalized assistance
+            <p className="text-gray-300 mb-6 text-base">
+              Contact Naksh Unisex Salon in Sikar directly for personalized assistance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="tel:+918690900970"
-                className="bg-[#d4af37] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#e0c95c] transition"
-                aria-label="Call Naksh Salon Sikar"
+                className="bg-[#d4af37] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#f0d26a] transition-all"
               >
                 📞 Call +91-8690900970
               </a>
@@ -172,20 +181,13 @@ export default function FAQSection() {
                 href="https://wa.me/918690900970"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-lg font-semibold hover:bg-[#d4af37] hover:text-black transition"
-                aria-label="WhatsApp Naksh Salon Sikar"
+                className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-lg font-semibold hover:bg-[#d4af37] hover:text-black transition-all"
               >
                 💬 WhatsApp Us
               </a>
             </div>
           </div>
         </motion.div>
-
-        {/* Hidden SEO Content */}
-        <div style={{ display: 'none' }} aria-hidden="true">
-          <h1>FAQ - Naksh Unisex Salon Sikar Beauty Services</h1>
-          <p>Frequently asked questions about hair styling, bridal makeup, facial treatments, Nail Services and beauty solutions at Naksh Unisex Salon in Sikar, Rajasthan. Get information about appointments, pricing, services and more.</p>
-        </div>
       </section>
     </>
   );
