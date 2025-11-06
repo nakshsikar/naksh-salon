@@ -134,43 +134,61 @@ _This application was submitted via Naksh Salon Website_`;
 
   // Structured Data for Job Postings
   const jobPostingSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Career Opportunities at Naksh Unisex Salon",
-    "description": "Job openings and training programs at Naksh Unisex Salon in Sikar, Rajasthan",
-    "url": "https://nakshsalon.com/career",
-    "numberOfItems": jobs.length,
-    "itemListElement": jobs.map((job, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "JobPosting",
-        "title": job.title,
-        "description": job.desc,
-        "datePosted": "2024-12-01",
-        "validThrough": "2025-03-01",
-        "employmentType": "FULL_TIME",
-        "hiringOrganization": {
-          "@type": "Organization",
-          "name": "Naksh Unisex Salon",
-          "sameAs": "https://nakshsalon.com"
-        },
-        "jobLocation": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Sikar",
-            "addressRegion": "Rajasthan",
-            "postalCode": "332001"
-          }
-        },
-        "experienceRequirements": {
-          "@type": "OccupationalExperienceRequirements",
-          "monthsOfExperience": 0
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Career Opportunities at Naksh Unisex Salon",
+  "description": "Job openings and training programs at Naksh Unisex Salon in Sikar, Rajasthan",
+  "url": "https://nakshsalon.com/career",
+  "numberOfItems": jobs.length,
+  "itemListElement": jobs.map((job, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "JobPosting",
+      "title": job.title,
+      "description": job.desc,
+      "datePosted": "2024-12-01",
+      "validThrough": "2025-03-01",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Naksh Unisex Salon",
+        "sameAs": "https://nakshsalon.com",
+        "logo": "https://nakshsalon.com/logo.png" 
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": { 
+          "@type": "PostalAddress",
+          "streetAddress": "Shri Yash Tower Road, Near Pawan Travels, Sikar",
+          "addressLocality": "Sikar",
+          "addressRegion": "Rajasthan",
+          "postalCode": "332001",
+          "addressCountry": "IN"
         }
+      },
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 0,
+          "unitText": "MONTH"
+        }
+      },
+      "experienceRequirements": {
+        "@type": "OccupationalExperienceRequirements",
+        "monthsOfExperience": 0
+      },
+      "applicantLocationRequirements": {
+        "@type": "Country",
+        "name": "India"
       }
-    }))
-  };
+    }
+  }))
+};
+
 
   return (
     <>
@@ -195,8 +213,9 @@ _This application was submitted via Naksh Salon Website_`;
       </Helmet>
 
       <script type="application/ld+json">
-        {JSON.stringify(jobPostingSchema)}
-      </script>
+  {JSON.stringify(jobPostingSchema)}
+</script>
+
 
       <section
         className="bg-black text-[#d4af37] min-h-screen mt-10 py-16 px-6 md:px-20"
