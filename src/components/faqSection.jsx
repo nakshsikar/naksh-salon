@@ -48,16 +48,16 @@ export default function FAQSection() {
     },
   ];
 
-  // ✅ Correct JSON-LD Schema
+  // ✅ Single, valid FAQ schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
+    "mainEntity": faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
+      "name": faq.question,
+      "acceptedAnswer": {
         "@type": "Answer",
-        text: faq.answer,
+        "text": faq.answer,
       },
     })),
   };
@@ -68,16 +68,16 @@ export default function FAQSection() {
 
   return (
     <>
+      {/* ✅ Inject only one FAQPage schema */}
       <Helmet>
-        {/* ✅ Inject structured data for SEO */}
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <section className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden">
-        {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-black opacity-80"></div>
 
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +94,6 @@ export default function FAQSection() {
           </p>
         </motion.div>
 
-        {/* FAQ Grid */}
         <div className="relative z-10 max-w-5xl mx-auto grid gap-4">
           {faqs.map((faq, index) => (
             <motion.div
@@ -106,7 +105,6 @@ export default function FAQSection() {
               onClick={() => toggleFAQ(index)}
               className="group bg-white/5 backdrop-blur-md border border-[#d4af37]/20 hover:border-[#d4af37]/50 rounded-2xl p-5 sm:p-6 cursor-pointer transition-all shadow-md hover:shadow-lg"
             >
-              {/* Question */}
               <div className="flex justify-between items-center">
                 <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white leading-snug tracking-wide pr-4 flex-1">
                   {faq.question}
@@ -120,7 +118,6 @@ export default function FAQSection() {
                 </span>
               </div>
 
-              {/* Answer */}
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.div
@@ -139,40 +136,6 @@ export default function FAQSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Call To Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="relative z-10 text-center mt-16"
-        >
-          <div className="bg-white/5 border border-[#d4af37]/20 rounded-2xl p-8 max-w-2xl mx-auto backdrop-blur-md shadow-lg">
-            <h3 className="text-2xl font-semibold text-[#d4af37] mb-3">
-              Still Have Questions?
-            </h3>
-            <p className="text-gray-300 mb-6 text-base">
-              Contact Naksh Unisex Salon in Sikar directly for personalized assistance.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="tel:+918690900970"
-                className="bg-[#d4af37] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#f0d26a] transition-all"
-              >
-                📞 Call +91-8690900970
-              </a>
-              <a
-                href="https://wa.me/918690900970"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-lg font-semibold hover:bg-[#d4af37] hover:text-black transition-all"
-              >
-                💬 WhatsApp Us
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </section>
     </>
   );
