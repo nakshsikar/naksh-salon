@@ -1,114 +1,145 @@
-import { Helmet } from 'react-helmet';
-import AboutSection from '../components/aboutSection'
-import BookNowSection from '../components/bookNowSection'
-import FAQSection from '../components/FaqSection'
-import HeroSection from '../components/heroSection'
-import MovingGallerySection from '../components/movingGallerySection'
-import TestimonialsSection from '../components/testimonialsSection'
-import WhyChooseUsSection from '../components/whyChooseUsSection'
+import { Helmet } from "react-helmet";
+import AboutSection from "../components/aboutSection";
+import BookNowSection from "../components/bookNowSection";
+import FAQSection from "../components/FaqSection";
+import HeroSection from "../components/heroSection";
+import MovingGallerySection from "../components/movingGallerySection";
+import TestimonialsSection from "../components/testimonialsSection";
+import WhyChooseUsSection from "../components/whyChooseUsSection";
 
 const Home = () => {
-  // Structured Data for Home Page
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Naksh Unisex Salon - Best Hair & Beauty Salon in Sikar, Rajasthan",
-    "description": "Premium unisex salon in Sikar offering professional haircuts, bridal makeup, facial, nail art, hair coloring & beauty services for men and women. Book appointment +91-8690900970",
-    "url": "https://nakshsalon.com",
-    "primaryImageOfPage": {
+    "@id": "https://nakshsalon.com/#webpage",
+    url: "https://nakshsalon.com",
+    name: "Naksh Unisex Salon - Best Hair & Beauty Salon in Sikar, Rajasthan",
+    description:
+      "Premium unisex salon in Sikar offering professional haircuts, bridal makeup, facial, nail art, hair coloring & beauty services for men and women. Book appointment +91-8690900970",
+    primaryImageOfPage: {
       "@type": "ImageObject",
-      "url": "https://nakshsalon.com/images/hero-banner.jpg",
-      "width": "1200",
-      "height": "630"
+      url: "https://nakshsalon.com/images/hero-banner.jpg",
+      width: "1200",
+      height: "630",
     },
-    "about": {
+    about: {
       "@type": "BeautySalon",
-      "name": "Naksh Unisex Salon",
-      "description": "Best unisex salon in Sikar, Rajasthan offering hair styling, bridal makeup, facial and beauty services",
-      "address": {
+      name: "Naksh Unisex Salon",
+      description:
+        "Best unisex salon in Sikar, Rajasthan offering hair styling, bridal makeup, facial and beauty services",
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "Sikar",
-        "addressRegion": "Rajasthan",
-        "postalCode": "332001",
-        "streetAddress": "Shri Yash Tower Road, Opposite Apple Imagine Store, Near Pawan Travels"
+        addressLocality: "Sikar",
+        addressRegion: "Rajasthan",
+        postalCode: "332001",
+        streetAddress:
+          "Shri Yash Tower Road, Opposite Apple Imagine Store, Near Pawan Travels",
       },
-      "telephone": "+91-8690900970",
-      "openingHours": "Mo-Su 10:00-20:00",
-      "areaServed": "Sikar"
+      telephone: "+91-8690900970",
+      openingHours: "Mo-Su 10:00-20:00",
+      areaServed: "Sikar",
     },
-    "mainEntity": {
-      "@type": "WebPageElement",
-      "name": "Naksh Unisex Salon Services"
-    }
   };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://nakshsalon.com/#faq",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What beauty services does Naksh Salon Sikar offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Naksh Unisex Salon in Sikar offers complete beauty and grooming services including professional haircuts, bridal makeup, facial treatments, nail art services, hair coloring, nail extensions, beard grooming, and complete beauty solutions for both men and women in Rajasthan.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do I need to book an appointment in advance at Naksh Salon Sikar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we recommend booking your appointment in advance to ensure your preferred time slot with our expert stylists in Sikar. This is especially important for bridal makeup, special occasions, and weekend appointments at our Rajasthan salon.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are your beauty products safe for all skin types in Sikar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely! At Naksh Salon Sikar, we use only premium, dermatologically-tested products suitable for all skin types. Our products are carefully selected to ensure safety, quality, and complete satisfaction for our clients in Rajasthan.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide bridal makeup packages for Sikar weddings?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! We specialize in customized bridal makeup packages for Sikar weddings. Our packages include pre-bridal consultations, trial sessions, complete bridal makeup, hairstyling, and traditional Rajasthani wedding looks to make your special day unforgettable.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I get a personalized beauty consultation at Naksh Salon Sikar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Of course! Our certified stylists in Sikar provide personalized consultations to understand your needs, skin type, and preferences. We suggest the best beauty treatments and styles that suit your personality and lifestyle in Rajasthan.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the salon timings at Naksh Unisex Salon Sikar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Naksh Unisex Salon in Sikar is open from 10:00 AM to 8:00 PM, all days of the week including Sundays and holidays. We're conveniently located in Sikar, Rajasthan to serve your beauty needs.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer men's grooming services in Sikar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer complete men's grooming services including haircuts, beard styling, facial treatments, hair coloring, and nail care services. Naksh Salon is the preferred unisex salon for men's grooming in Sikar, Rajasthan.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What makes Naksh Salon the best beauty salon in Sikar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Naksh Unisex Salon stands out in Sikar due to our certified experts, premium products, modern techniques, hygienic environment, personalized service, and affordable pricing. We're committed to making you look and feel your best in Rajasthan.",
+        },
+      },
+    ],
+  };
+
+  // ✅ Convert safely to JSON string for <script> tag
+  const structuredData = JSON.stringify([homePageSchema, faqSchema]).replace(
+    /</g,
+    "\\u003c"
+  );
 
   return (
     <>
-      {/* ✅ Home Page SEO Meta Tags */}
       <Helmet>
-        <title>Naksh Unisex Salon Sikar | Best Hair, Bridal Makeup, Beauty & Nail Services in Rajasthan</title>
-        <meta 
-          name="description" 
-          content="Best unisex salon in Sikar - Professional haircuts, bridal makeup, facial, nail art, hair coloring & beauty services for men & women. ✅ Expert stylists ✅ Affordable prices ✅ Book now +91-8690900970" 
+        <title>
+          Naksh Unisex Salon Sikar | Best Hair, Bridal Makeup, Beauty & Nail
+          Services in Rajasthan
+        </title>
+        <meta
+          name="description"
+          content="Best unisex salon in Sikar - Professional haircuts, bridal makeup, facial, nail art, hair coloring & beauty services for men & women. ✅ Expert stylists ✅ Affordable prices ✅ Book now +91-8690900970"
         />
-        <meta 
-          name="keywords" 
-          content="best salon in sikar, unisex salon sikar, bridal makeup sikar, hair salon sikar, beauty parlour sikar, facial sikar, nail art sikar, haircut sikar, makeup artist sikar, naksh salon sikar, beauty services rajasthan" 
-        />
-        <meta name="author" content="Naksh Unisex Salon" />
-        
-        {/* Canonical URL */}
         <link rel="canonical" href="https://nakshsalon.com" />
-        
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Naksh Unisex Salon Sikar | Best Hair & Beauty Services in Rajasthan" />
-        <meta property="og:description" content="Premium unisex salon in Sikar offering professional haircuts, bridal makeup, facial, nail art & beauty services. Book appointment +91-8690900970" />
-        <meta property="og:url" content="https://nakshsalon.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://nakshsalon.com/images/og-image.jpg" />
-        <meta property="og:locale" content="hi_IN" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Naksh Unisex Salon Sikar | Best Beauty Services" />
-        <meta name="twitter:description" content="Premium unisex salon in Sikar for haircuts, bridal makeup, facial & Nail Services. Book now +91-8690900970" />
-        <meta name="twitter:image" content="https://nakshsalon.com/images/twitter-image.jpg" />
-        
-        {/* Additional Meta Tags */}
-        <meta name="geo.region" content="IN-RJ" />
-        <meta name="geo.placename" content="Sikar" />
-        <meta name="geo.position" content="27.6094;75.1399" />
-        <meta name="ICBM" content="27.6094, 75.1399" />
       </Helmet>
 
-      {/* Structured Data for SEO */}
-      <script type="application/ld+json">
-        {JSON.stringify(homePageSchema)}
-      </script>
+      {/* ✅ Structured Data - Syntax Safe */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: structuredData }}
+      />
 
-      {/* Hidden SEO Content for Crawlers */}
-      <div style={{ display: 'none' }} aria-hidden="true">
-        <h1>Naksh Unisex Salon - Best Salon in Sikar, Rajasthan</h1>
-        <h2>Premium Beauty Services in Sikar</h2>
-        <p>Welcome to Naksh Unisex Salon, the best hair and beauty salon in Sikar, Rajasthan. We offer professional haircuts, bridal makeup, facial treatments, Nail Services, hair coloring, and complete beauty solutions for both men and women.</p>
-        <p>Located at Shri Yash Tower Road, Opposite Apple Imagine Store, Near Pawan Travels, Sikar. Call us at +91-8690900970 to book your appointment.</p>
-        <ul>
-          <li>Haircut & Styling Services in Sikar</li>
-          <li>Bridal Makeup for Sikar Weddings</li>
-          <li>Facial & Skin Treatments</li>
-          <li>Nail art & Relaxation Therapy</li>
-          <li>Hair Coloring & Highlights</li>
-          <li>Beard Grooming for Men</li>
-        </ul>
-      </div>
-
-      {/* Main Content Sections */}
       <main itemScope itemType="https://schema.org/BeautySalon">
-        <meta itemProp="name" content="Naksh Unisex Salon" />
-        <meta itemProp="description" content="Best unisex salon in Sikar offering professional beauty services for men and women" />
-        <meta itemProp="address" content="Sikar, Rajasthan" />
-        <meta itemProp="telephone" content="+91-8690900970" />
-        
         <HeroSection />
         <AboutSection />
         <MovingGallerySection />
@@ -118,7 +149,7 @@ const Home = () => {
         <BookNowSection />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
