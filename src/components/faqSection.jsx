@@ -12,7 +12,8 @@ export default function FAQSection() {
         "Naksh Unisex Salon in Sikar offers complete beauty and grooming services including professional haircuts, bridal makeup, facial treatments, nail art services, hair coloring, nail extensions, beard grooming, and complete beauty solutions for both men and women in Rajasthan.",
     },
     {
-      question: "Do I need to book an appointment in advance at Naksh Salon Sikar?",
+      question:
+        "Do I need to book an appointment in advance at Naksh Salon Sikar?",
       answer:
         "Yes, we recommend booking your appointment in advance to ensure your preferred time slot with our expert stylists in Sikar. This is especially important for bridal makeup, special occasions, and weekend appointments at our Rajasthan salon.",
     },
@@ -27,7 +28,8 @@ export default function FAQSection() {
         "Yes! We specialize in customized bridal makeup packages for Sikar weddings. Our packages include pre-bridal consultations, trial sessions, complete bridal makeup, hairstyling, and traditional Rajasthani wedding looks to make your special day unforgettable.",
     },
     {
-      question: "Can I get a personalized beauty consultation at Naksh Salon Sikar?",
+      question:
+        "Can I get a personalized beauty consultation at Naksh Salon Sikar?",
       answer:
         "Of course! Our certified stylists in Sikar provide personalized consultations to understand your needs, skin type, and preferences. We suggest the best beauty treatments and styles that suit your personality and lifestyle in Rajasthan.",
     },
@@ -52,12 +54,13 @@ export default function FAQSection() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map((faq) => ({
+    "@id": "https://nakshsalon.com/#faq",
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
+      name: faq.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": faq.answer,
+        text: faq.answer,
       },
     })),
   };
@@ -70,9 +73,10 @@ export default function FAQSection() {
     <>
       {/* ✅ Inject only one FAQPage schema */}
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       </Helmet>
 
       <section className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden">
