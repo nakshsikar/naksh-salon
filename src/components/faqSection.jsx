@@ -36,7 +36,7 @@ export default function FAQSection() {
     {
       question: "What are the salon timings at Naksh Unisex Salon Sikar?",
       answer:
-        "Naksh Unisex Salon in Sikar is open from 10:00 AM to 8:00 PM, all days of the week including Sundays and holidays. We're conveniently located in Sikar, Rajasthan to serve your beauty needs.",
+        "Naksh Unisex Salon in Sikar is open from 10:00 AM to 10:00 PM, all days of the week including Sundays and holidays. We're conveniently located in Sikar, Rajasthan to serve your beauty needs.",
     },
     {
       question: "Do you offer men's grooming services in Sikar?",
@@ -65,13 +65,22 @@ export default function FAQSection() {
     })),
   };
 
+  // ✅ Safely convert to JSON string for script tag
+  const faqStructuredData = JSON.stringify(faqSchema).replace(/</g, "\\u003c");
+
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
     <>
-      {/* No structured data here — handled in Home.jsx */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: faqStructuredData }}
+    />
+      <Helmet>
+      <title>FAQ - Naksh Salon Sikar</title>
+    </Helmet>
 
       <section className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-black opacity-80"></div>
