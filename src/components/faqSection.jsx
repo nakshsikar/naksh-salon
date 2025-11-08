@@ -83,7 +83,7 @@ export default function FAQSection() {
     </Helmet>
 
       <section className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-black opacity-80"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#0a0a0a] via-[#111111] to-black opacity-80"></div>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
