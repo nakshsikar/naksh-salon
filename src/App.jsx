@@ -42,7 +42,7 @@ function App() {
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "About Naksh Salon",
+                "name": "About Naksh Unisex Salon",
                 "item": "https://nakshsalon.com/about",
                 "description": "Best unisex salon in Sikar, Rajasthan"
               },
@@ -58,7 +58,7 @@ function App() {
                 "position": 5,
                 "name": "Contact Salon",
                 "item": "https://nakshsalon.com/contact",
-                "description": "Visit Naksh Salon in Sikar +91-8690900970"
+                "description": "Visit Naksh Unisex Salon in Sikar +91-8690900970"
               }
             ]
           })
@@ -129,7 +129,7 @@ const NotFound = () => {
   const notFoundSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Page Not Found - Naksh Salon Sikar",
+    "name": "Page Not Found - Naksh Unisex Salon Sikar",
     "description": "The page you're looking for doesn't exist. Return to Naksh Unisex Salon homepage.",
     "url": "https://nakshsalon.com/404",
     "mainEntity": {
@@ -146,7 +146,7 @@ const NotFound = () => {
       />
       
       <h1>404 - Page Not Found</h1>
-      <p>Sorry, the page you are looking for doesn't exist at Naksh Salon.</p>
+      <p>Sorry, the page you are looking for doesn't exist at Naksh Unisex Salon.</p>
       <p>Explore our popular services:</p>
       <div style={{ marginTop: '20px' }}>
         <a href="/" style={{ margin: '0 10px', color: '#D4AF37' }}>Home</a>

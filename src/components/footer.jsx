@@ -14,13 +14,13 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-4">
             <img
               src="/logo.png"
-              alt="Naksh Salon Logo"
+              alt="Naksh Unisex Salon Logo"
               className="h-12 w-auto drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]"
             />
-            <h3 className="text-2xl font-semibold text-[#d4af37]">Naksh Salon</h3>
+            <h3 className="text-2xl font-semibold text-[#d4af37]">Naksh Unisex Salon</h3>
           </div>
           <p className="text-gray-400 max-w-sm leading-relaxed">
-            Discover the art of beauty, style, and elegance with Naksh Salon —
+            Discover the art of beauty, style, and elegance with Naksh Unisex Salon —
             where luxury meets perfection. Pamper yourself in a world of glow
             and glamour.
           </p>
@@ -69,7 +69,7 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="relative z-10 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Naksh Salon. All Rights Reserved. <br />
+        © {new Date().getFullYear()} Naksh Unisex Salon. All Rights Reserved. <br />
         Designed & Developed by{" "}
         <a
           href="https://instagram.com/developer.b4"

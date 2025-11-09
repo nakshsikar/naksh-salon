@@ -7,20 +7,20 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What beauty services does Naksh Salon Sikar offer?",
+      question: "What beauty services does Naksh Unisex Salon Sikar offer?",
       answer:
         "Naksh Unisex Salon in Sikar offers complete beauty and grooming services including professional haircuts, bridal makeup, facial treatments, nail art services, hair coloring, nail extensions, beard grooming, and complete beauty solutions for both men and women in Rajasthan.",
     },
     {
       question:
-        "Do I need to book an appointment in advance at Naksh Salon Sikar?",
+        "Do I need to book an appointment in advance at Naksh Unisex Salon Sikar?",
       answer:
         "Yes, we recommend booking your appointment in advance to ensure your preferred time slot with our expert stylists in Sikar. This is especially important for bridal makeup, special occasions, and weekend appointments at our Rajasthan salon.",
     },
     {
       question: "Are your beauty products safe for all skin types in Sikar?",
       answer:
-        "Absolutely! At Naksh Salon Sikar, we use only premium, dermatologically-tested products suitable for all skin types. Our products are carefully selected to ensure safety, quality, and complete satisfaction for our clients in Rajasthan.",
+        "Absolutely! At Naksh Unisex Salon Sikar, we use only premium, dermatologically-tested products suitable for all skin types. Our products are carefully selected to ensure safety, quality, and complete satisfaction for our clients in Rajasthan.",
     },
     {
       question: "Do you provide bridal makeup packages for Sikar weddings?",
@@ -29,7 +29,7 @@ export default function FAQSection() {
     },
     {
       question:
-        "Can I get a personalized beauty consultation at Naksh Salon Sikar?",
+        "Can I get a personalized beauty consultation at Naksh Unisex Salon Sikar?",
       answer:
         "Of course! Our certified stylists in Sikar provide personalized consultations to understand your needs, skin type, and preferences. We suggest the best beauty treatments and styles that suit your personality and lifestyle in Rajasthan.",
     },
@@ -41,10 +41,10 @@ export default function FAQSection() {
     {
       question: "Do you offer men's grooming services in Sikar?",
       answer:
-        "Yes, we offer complete men's grooming services including haircuts, beard styling, facial treatments, hair coloring, and nail care services. Naksh Salon is the preferred unisex salon for men's grooming in Sikar, Rajasthan.",
+        "Yes, we offer complete men's grooming services including haircuts, beard styling, facial treatments, hair coloring, and nail care services. Naksh Unisex Salon is the preferred unisex salon for men's grooming in Sikar, Rajasthan.",
     },
     {
-      question: "What makes Naksh Salon the best beauty salon in Sikar?",
+      question: "What makes Naksh Unisex Salon the best beauty salon in Sikar?",
       answer:
         "Naksh Unisex Salon stands out in Sikar due to our certified experts, premium products, modern techniques, hygienic environment, personalized service, and affordable pricing. We're committed to making you look and feel your best in Rajasthan.",
     },
@@ -79,7 +79,7 @@ export default function FAQSection() {
       dangerouslySetInnerHTML={{ __html: faqStructuredData }}
     />
       <Helmet>
-      <title>FAQ - Naksh Salon Sikar</title>
+      <title>FAQ - Naksh Unisex Salon Sikar</title>
     </Helmet>
 
       <section className="relative w-full bg-black text-[#d4af37] py-16 px-4 sm:px-8 md:px-16 overflow-hidden">

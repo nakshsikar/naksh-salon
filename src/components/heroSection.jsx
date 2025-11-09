@@ -8,14 +8,14 @@ export default function HeroSlider() {
       id: 1,
       img: "/location.avif",
       title: "Luxury Hair Styling in Sikar",
-      description: "Professional haircuts & styling for men and women at Naksh Salon Sikar",
+      description: "Professional haircuts & styling for men and women at Naksh Unisex Salon Sikar",
       alt: "Luxury hair styling services at Naksh Unisex Salon Sikar - Best salon in Rajasthan"
     },
     {
       id: 2,
       img: "/makeup.avif",
       title: "Bridal Makeup in Sikar",
-      description: "Expert bridal & wedding makeup services at Naksh Salon Rajasthan",
+      description: "Expert bridal & wedding makeup services at Naksh Unisex Salon Rajasthan",
       alt: "Bridal makeup services at Naksh Unisex Salon Sikar - Professional wedding makeup artists"
     },
     {
@@ -23,13 +23,13 @@ export default function HeroSlider() {
       img: "/hairstyling.avif",
       title: "Premium Unisex Salon Sikar",
       description: "Complete beauty & grooming services for men and women in Rajasthan",
-      alt: "Unisex salon experience at Naksh Salon Sikar - Best beauty services for men and women"
+      alt: "Unisex salon experience at Naksh Unisex Salon Sikar - Best beauty services for men and women"
     },
     {
       id: 4,
       img: "/nail-extension.jpg",
       title: "Facial & nail treatments",
-      description: "Relaxing facial and Nail Services at Naksh Salon Sikar",
+      description: "Relaxing facial and Nail Services at Naksh Unisex Salon Sikar",
       alt: "Facial and nail treatments at Naksh Unisex Salon Sikar - Skin care services Rajasthan"
     },
   ];
@@ -63,7 +63,7 @@ export default function HeroSlider() {
         itemType="https://schema.org/WebPageElement"
         aria-label="Naksh Unisex Salon Hero Banner"
       >
-        <meta itemProp="name" content="Naksh Salon Hero Slider" />
+        <meta itemProp="name" content="Naksh Unisex Salon Hero Slider" />
         <meta itemProp="description" content="Showcasing premium beauty services at Naksh Unisex Salon Sikar" />
         
         <Splide
@@ -127,17 +127,17 @@ export default function HeroSlider() {
                     <a
                       href="tel:+918690900970"
                       className="bg-[#d4af37] text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#e0c95c] transition-all duration-300 shadow-lg hover:shadow-xl"
-                      aria-label="Call Naksh Salon Sikar at +91 86909 00970"
+                      aria-label="Call Naksh Unisex Salon Sikar at +91 86909 00970"
                     >
                       📞 Call +91-8690900970
                     </a>
                     
                     <a
-                      href="https://wa.me/918690900970?text=Hi! I want to book an appointment at Naksh Salon Sikar."
+                      href="https://wa.me/918690900970?text=Hi! I want to book an appointment at Naksh Unisex Salon Sikar."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="border-2 border-[#d4af37] text-[#d4af37] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#d4af37] hover:text-black transition-all duration-300"
-                      aria-label="Message Naksh Salon Sikar on WhatsApp"
+                      aria-label="Message Naksh Unisex Salon Sikar on WhatsApp"
                     >
                       💬 WhatsApp Now
                     </a>

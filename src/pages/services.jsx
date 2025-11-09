@@ -120,7 +120,7 @@ export default function Services() {
         />
         <meta
           name="keywords"
-          content="salon services sikar, best salon in sikar, unisex salon services, haircut sikar, bridal makeup sikar, facial sikar, spa sikar, beauty treatments, grooming services, naksh salon services"
+          content="salon services sikar, best salon in sikar, unisex salon services, haircut sikar, bridal makeup sikar, facial sikar, spa sikar, beauty treatments, grooming services, Naksh Unisex Salon services"
         />
         <meta name="author" content="Naksh Unisex Salon" />
         
@@ -194,7 +194,7 @@ export default function Services() {
                   </ul>
                   <div className="mt-6">
                     <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I want to book ${s.title} service at Naksh Salon Sikar.`}
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I want to book ${s.title} service at Naksh Unisex Salon Sikar.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#d4af37] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#e0c95c] transition inline-block"
@@ -240,7 +240,7 @@ export default function Services() {
                   </ul>
                   <div className="mt-6">
                     <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I want to book ${s.title} service at Naksh Salon Sikar.`}
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I want to book ${s.title} service at Naksh Unisex Salon Sikar.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#d4af37] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#e0c95c] transition inline-block"
@@ -266,10 +266,10 @@ export default function Services() {
               Ready to Experience the Best Salon in Sikar?
             </h2>
             <p className="text-gray-300 mb-6">
-              Book your appointment today and discover why Naksh Salon is the preferred choice for beauty and grooming in Sikar, Rajasthan.
+              Book your appointment today and discover why Naksh Unisex Salon is the preferred choice for beauty and grooming in Sikar, Rajasthan.
             </p>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I want to book a service at Naksh Salon Sikar. Please suggest available slots.`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I want to book a service at Naksh Unisex Salon Sikar. Please suggest available slots.`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#d4af37] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#e0c95c] transition inline-block text-lg"

@@ -45,7 +45,7 @@ export default function ContactUs() {
         age: form.age,
         location: form.location,
         message: `
-📩 New Contact Request from Naksh Salon Website
+📩 New Contact Request from Naksh Unisex Salon Website
 
 👤 Name: ${form.name}
 📧 Email: ${form.email}
@@ -91,8 +91,8 @@ Sent via Naksh Unisex Salon Website - ${currentYear}
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "name": "Naksh Salon",
-    "description": "Contact Naksh Salon Sikar for beauty services, nail training, and hair treatments in Rajasthan.",
+    "name": "Naksh Unisex Salon",
+    "description": "Contact Naksh Unisex Salon Sikar for beauty services, nail training, and hair treatments in Rajasthan.",
     "url": "https://nakshsalon.com/contact",
     "telephone": "+91-8690900970",
     "email": "naksh.sikar@gmail.com",
@@ -115,18 +115,18 @@ Sent via Naksh Unisex Salon Website - ${currentYear}
   return (
     <>
       <Helmet>
-        <title>Contact Naksh Salon Sikar | Book Appointment & Inquiries</title>
+        <title>Contact Naksh Unisex Salon Sikar | Book Appointment & Inquiries</title>
         <meta
           name="description"
-          content="Get in touch with Naksh Salon Sikar, Rajasthan for appointments, beauty consultations, and training inquiries. Fill our quick contact form today!"
+          content="Get in touch with Naksh Unisex Salon Sikar, Rajasthan for appointments, beauty consultations, and training inquiries. Fill our quick contact form today!"
         />
         <meta
           name="keywords"
-          content="contact naksh salon, sikar beauty salon contact, naksh unisex salon phone number, salon near me, salon appointment sikar, hair & beauty services"
+          content="contact Naksh Unisex Salon, sikar beauty salon contact, naksh unisex salon phone number, salon near me, salon appointment sikar, hair & beauty services"
         />
-        <meta name="author" content="Naksh Salon" />
+        <meta name="author" content="Naksh Unisex Salon" />
         <link rel="canonical" href="https://nakshsalon.com/contact" />
-        <meta property="og:title" content="Contact Naksh Salon Sikar | Beauty & Training Inquiries" />
+        <meta property="og:title" content="Contact Naksh Unisex Salon Sikar | Beauty & Training Inquiries" />
         <meta property="og:description" content="Contact Naksh Unisex Salon Sikar for salon appointments, nail training, or hair care services." />
         <meta property="og:url" content="https://nakshsalon.com/contact" />
         <meta property="og:type" content="website" />
@@ -143,7 +143,7 @@ Sent via Naksh Unisex Salon Website - ${currentYear}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37]">Contact Naksh Salon</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37]">Contact Naksh Unisex Salon</h1>
           <p className="text-gray-400 mt-3 max-w-2xl mx-auto text-lg">
             Have questions or want to book an appointment? Fill the form below or reach out directly — we’d love to hear from you.
           </p>
@@ -246,13 +246,13 @@ Sent via Naksh Unisex Salon Website - ${currentYear}
           >
             <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Our Salon</h2>
             <p className="text-gray-300 mb-2">
-              <strong>Naksh Salon</strong>
+              <strong>Naksh Unisex Salon</strong>
             </p>
             <p className="text-gray-300 mb-2">📞 +91-8690900970, 7877705277</p>
             <p className="text-gray-300 mb-6">✉️ naksh.sikar@gmail.com</p>
 
             <iframe
-              title="Naksh Salon Sikar Location"
+              title="Naksh Unisex Salon Sikar Location"
               src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Shri Yash Tower Road, Sikar&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="100%"
               height="300"

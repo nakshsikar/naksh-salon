@@ -13,11 +13,11 @@ function Navbar() {
 
   // SEO optimized navigation items with proper titles
   const navItems = [
-    { path: "/", label: "Home", title: "Naksh Salon - Best Unisex Salon in Sikar" },
-    { path: "/about", label: "About", title: "About Naksh Salon - Our Story & Expertise" },
+    { path: "/", label: "Home", title: "Naksh Unisex Salon - Best Unisex Salon in Sikar" },
+    { path: "/about", label: "About", title: "About Naksh Unisex Salon - Our Story & Expertise" },
     { path: "/services", label: "Services", title: "Salon Services - Hair, Makeup, Spa in Sikar" },
-    { path: "/blogs", label: "Blogs", title: "Beauty Tips & Blog - Naksh Salon Sikar" },
-    { path: "/contact", label: "Contact", title: "Contact Naksh Salon - Book Appointment" },
+    { path: "/blogs", label: "Blogs", title: "Beauty Tips & Blog - Naksh Unisex Salon Sikar" },
+    { path: "/contact", label: "Contact", title: "Contact Naksh Unisex Salon - Book Appointment" },
   ];
 
   return (
@@ -40,7 +40,7 @@ function Navbar() {
           to="/" 
           className="flex items-center gap-2 shrink-0"
           title="Naksh Unisex Salon - Premium Beauty Services in Sikar"
-          aria-label="Visit Naksh Salon Homepage"
+          aria-label="Visit Naksh Unisex Salon Homepage"
           itemProp="url"
         >
           <img
@@ -53,7 +53,7 @@ function Navbar() {
             itemProp="logo"
           />
           <span className="text-[#d4af37] font-bold text-base sm:text-lg tracking-wide" itemProp="name">
-            Naksh Salon
+            Naksh Unisex Salon
           </span>
         </Link>
 
@@ -84,8 +84,8 @@ function Navbar() {
           rounded-full text-[#d4af37] text-sm uppercase tracking-wide 
           hover:bg-[#d4af37]/30 transition duration-300 shadow-[0_0_10px_rgba(212,175,55,0.3)] 
           whitespace-nowrap shrink-0"
-          title="Career Opportunities at Naksh Salon Sikar"
-          aria-label="Explore career opportunities at Naksh Salon"
+          title="Career Opportunities at Naksh Unisex Salon Sikar"
+          aria-label="Explore career opportunities at Naksh Unisex Salon"
           role="button"
         >
           Join Our Team
@@ -132,7 +132,7 @@ function Navbar() {
             className="inline-block px-6 py-3 bg-[#d4af37]/20 border border-[#d4af37]/50 
             rounded-full text-[#d4af37] hover:bg-[#d4af37]/30 transition duration-300 
             mt-2"
-            title="Career at Naksh Salon - Join Our Beauty Team"
+            title="Career at Naksh Unisex Salon - Join Our Beauty Team"
             role="menuitem"
           >
             Career Opportunities

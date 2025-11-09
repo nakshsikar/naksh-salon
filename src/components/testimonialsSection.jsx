@@ -19,7 +19,7 @@ const generateTestimonials = () => {
   return names.map((name, i) => ({
     name: `${name} ${["Sharma", "Patel", "Mehta", "Kapoor", "Singh"][i % 5]}`,
     text:
-      "Absolutely loved my experience at Naksh Salon! The staff was professional, and my transformation was simply stunning.",
+      "Absolutely loved my experience at Naksh Unisex Salon! The staff was professional, and my transformation was simply stunning.",
     rating: Math.floor(Math.random() * 2) + 4, // 4–5 stars
   }));
 };
@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
           What Our Clients Say
         </h2>
         <p className="text-gray-400 mt-3 p-5">
-          250+ happy clients who trust Naksh Salon for their glow ✨
+          250+ happy clients who trust Naksh Unisex Salon for their glow ✨
         </p>
       </motion.div>
 

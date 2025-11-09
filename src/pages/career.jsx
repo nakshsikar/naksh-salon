@@ -15,7 +15,7 @@ const jobs = [
   {
     id: "skin-treatment-learner",
     title: "Skin Treatment Learner",
-    desc: "Learn advanced facials, peels, and skincare procedures from certified professionals at Naksh Salon Sikar. Perfect for beginners interested in beauty care.",
+    desc: "Learn advanced facials, peels, and skincare procedures from certified professionals at Naksh Unisex Salon Sikar. Perfect for beginners interested in beauty care.",
     location: "Sikar, Rajasthan",
     type: "FULL_TIME",
     experience: "No Experience Needed",
@@ -79,7 +79,7 @@ export default function Career() {
 
     try {
       const selectedJob = jobs.find((job) => job.id === apply.jobId);
-      const message = `🚀 *NEW CAREER APPLICATION - NAKSH SALON SIKAR* 🚀
+      const message = `🚀 *NEW CAREER APPLICATION - Naksh Unisex Salon SIKAR* 🚀
 
 *Applicant Information:*
 📛 *Full Name:* ${apply.name}
@@ -93,9 +93,9 @@ export default function Career() {
 💼 *Experience Level:* ${selectedJob?.experience}
 
 *Additional Information:*
-I'm interested in joining the ${selectedJob?.title} program at Naksh Salon Sikar. Please contact me for more details about the application process.
+I'm interested in joining the ${selectedJob?.title} program at Naksh Unisex Salon Sikar. Please contact me for more details about the application process.
 
-_This application was submitted via Naksh Salon Website_`;
+_This application was submitted via Naksh Unisex Salon Website_`;
 
       const encodedMessage = encodeURIComponent(message);
       const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
@@ -121,14 +121,14 @@ _This application was submitted via Naksh Salon Website_`;
   return (
     <>
       <Helmet>
-        <title>Careers at Naksh Salon Sikar | Beauty Jobs & Training Programs Rajasthan</title>
+        <title>Careers at Naksh Unisex Salon Sikar | Beauty Jobs & Training Programs Rajasthan</title>
         <meta
           name="description"
           content="Join Naksh Unisex Salon Sikar - Career opportunities in beauty industry. Nail Services training, skin treatment courses, hair chemical programs in Rajasthan."
         />
         <meta
           name="keywords"
-          content="beauty jobs sikar, salon careers rajasthan, nail academy training, skin treatment courses, hair chemical programs, beauty industry jobs, naksh salon careers"
+          content="beauty jobs sikar, salon careers rajasthan, nail academy training, skin treatment courses, hair chemical programs, beauty industry jobs, Naksh Unisex Salon careers"
         />
         <meta name="author" content="Naksh Unisex Salon" />
         <link rel="canonical" href="https://nakshsalon.com/career" />
@@ -189,7 +189,7 @@ _This application was submitted via Naksh Salon Website_`;
       <section className="bg-black text-[#d4af37] min-h-screen mt-10 py-16 px-6 md:px-20" id="careers">
         <motion.header initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#d4af37]">
-            Careers at Naksh Salon Sikar
+            Careers at Naksh Unisex Salon Sikar
           </h1>
           <p className="text-gray-400 mt-3 max-w-2xl mx-auto text-lg">
             Join Rajasthan's premier unisex salon in <strong>Sikar</strong>. Learn, grow, and build your career in the beauty industry with expert training.

@@ -8,7 +8,7 @@ const posts = [
   {
     slug: "top-5-hair-trends-2025",
     title: "Top 5 Hair Trends of 2025 in Sikar – Unisex Styles to Try This Year",
-    excerpt: "Discover the hottest unisex haircut and color trends of 2025 in Sikar — from textured layers to glossy hair shades that elevate your personality at Naksh Salon.",
+    excerpt: "Discover the hottest unisex haircut and color trends of 2025 in Sikar — from textured layers to glossy hair shades that elevate your personality at Naksh Unisex Salon.",
     category: "Hair Trends",
     readTime: "5 min read",
     publishDate: "2024-12-15"
@@ -16,7 +16,7 @@ const posts = [
   {
     slug: "bridal-makeup-guide-sikar",
     title: "Bridal Makeup Guide for Sikar Weddings – Flawless Wedding Look",
-    excerpt: "Complete bridal makeup guide for Sikar weddings. Pre-wedding skin prep, traditional looks, and long-lasting beauty tips from Naksh Salon experts.",
+    excerpt: "Complete bridal makeup guide for Sikar weddings. Pre-wedding skin prep, traditional looks, and long-lasting beauty tips from Naksh Unisex Salon experts.",
     category: "Bridal Beauty",
     readTime: "7 min read",
     publishDate: "2024-12-10"
@@ -67,14 +67,14 @@ export default function Blogs() {
     <>
       {/* ✅ Enhanced SEO Meta Tags */}
       <Helmet>
-        <title>Beauty Blog Sikar | Naksh Salon - Hair, Makeup & Grooming Tips Rajasthan</title>
+        <title>Beauty Blog Sikar | Naksh Unisex Salon - Hair, Makeup & Grooming Tips Rajasthan</title>
         <meta
           name="description"
           content="Naksh Unisex Salon Beauty Blog - Expert hair care tips, bridal makeup guides, 2025 trends & self-care routines for Sikar residents. Best salon beauty advice."
         />
         <meta
           name="keywords"
-          content="beauty blog sikar, hair tips sikar, bridal makeup guide sikar, salon blog rajasthan, grooming tips, naksh salon blog, beauty articles, hair trends 2025"
+          content="beauty blog sikar, hair tips sikar, bridal makeup guide sikar, salon blog rajasthan, grooming tips, Naksh Unisex Salon blog, beauty articles, hair trends 2025"
         />
         <meta name="author" content="Naksh Unisex Salon" />
         
@@ -108,7 +108,7 @@ export default function Blogs() {
             className="text-center mb-14"
           >
             <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-[#d4af37]">
-              Beauty Blog - Naksh Salon Sikar
+              Beauty Blog - Naksh Unisex Salon Sikar
             </h1>
             <p className="text-gray-400 mt-3 text-lg max-w-2xl mx-auto">
               Expert beauty tips, latest hair trends, and grooming advice from{" "}

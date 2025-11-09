@@ -9,7 +9,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "/2.jpg", 
-      alt: "Bridal makeup services at Naksh Salon Sikar - Wedding makeup artist in Rajasthan",
+      alt: "Bridal makeup services at Naksh Unisex Salon Sikar - Wedding makeup artist in Rajasthan",
       title: "Bridal Makeup"
     },
     {
@@ -19,7 +19,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "/4.webp",
-      alt: "Facial treatment at Naksh Salon Sikar - Skin care and beauty services Rajasthan",
+      alt: "Facial treatment at Naksh Unisex Salon Sikar - Skin care and beauty services Rajasthan",
       title: "Facial Treatment"
     },
     {
@@ -29,7 +29,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "nail-art2.png",
-      alt: "Nail art designs at Naksh Salon Sikar - Creative nail services Rajasthan",
+      alt: "Nail art designs at Naksh Unisex Salon Sikar - Creative nail services Rajasthan",
       title: "Nail Art"
     }
   ];
@@ -42,7 +42,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "/7.jpg",
-      alt: "Hair spa treatment at Naksh Salon Sikar - Hair care and conditioning services",
+      alt: "Hair spa treatment at Naksh Unisex Salon Sikar - Hair care and conditioning services",
       title: "Hair Spa"
     },
     {
@@ -52,7 +52,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "/9.jpg",
-      alt: "Beard styling at Naksh Salon Sikar - Men beard grooming and shaping Rajasthan",
+      alt: "Beard styling at Naksh Unisex Salon Sikar - Men beard grooming and shaping Rajasthan",
       title: "Beard Styling"
     },
     {
@@ -62,7 +62,7 @@ export default function MovingGallerySection() {
     },
     {
       src: "nail-art1.avif",
-      alt: "Nail extension services at Naksh Salon Sikar - Premium nail treatments Rajasthan", 
+      alt: "Nail extension services at Naksh Unisex Salon Sikar - Premium nail treatments Rajasthan", 
       title: "Nail Extensions"
     }
   ];
@@ -88,7 +88,7 @@ export default function MovingGallerySection() {
       "contentUrl": `https://nakshsalon.com${img.src}`,
       "name": img.title,
       "description": img.alt,
-      "caption": `Naksh Salon Sikar - ${img.title}`
+      "caption": `Naksh Unisex Salon Sikar - ${img.title}`
     }))
   };
 
@@ -105,7 +105,7 @@ export default function MovingGallerySection() {
         itemType="https://schema.org/ImageGallery"
         aria-label="Naksh Unisex Salon Services Gallery"
       >
-        <meta itemProp="name" content="Naksh Salon Beauty Gallery" />
+        <meta itemProp="name" content="Naksh Unisex Salon Beauty Gallery" />
         <meta itemProp="description" content="Gallery of hair, makeup and beauty services at Naksh Unisex Salon Sikar" />
         
         {/* Background Gradient */}
@@ -114,7 +114,7 @@ export default function MovingGallerySection() {
         {/* SEO Optimized Title */}
         <div className="relative z-10 text-center mb-16 px-4">
           <h2 className="text-4xl md:text-5xl font-semibold text-[#d4af37] mb-4">
-            Our Beauty Gallery - Naksh Salon Sikar
+            Our Beauty Gallery - Naksh Unisex Salon Sikar
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Explore our premium beauty services in <strong>Sikar, Rajasthan</strong> - 

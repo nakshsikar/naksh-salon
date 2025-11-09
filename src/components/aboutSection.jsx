@@ -24,7 +24,7 @@ export default function AboutSection() {
           <div className="glass-card rounded-2xl overflow-hidden h-64">
             <img
               src="/interior.jpg"
-              alt="Professional hair styling at Naksh Salon in Sikar"
+              alt="Professional hair styling at Naksh Unisex Salon in Sikar"
               className="object-cover w-full h-64 hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -42,7 +42,7 @@ export default function AboutSection() {
           <div className="glass-card rounded-2xl overflow-hidden col-span-2">
             <img
               src="/interior3.jpg"
-              alt="Bridal and makeup services at Naksh Salon Sikar"
+              alt="Bridal and makeup services at Naksh Unisex Salon Sikar"
               className="object-cover w-full h-72 hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -83,7 +83,7 @@ export default function AboutSection() {
             <span className="text-[#d4af37] font-medium">
               beauty and hair salon in Sikar
             </span>
-            , Naksh Salon brings together luxury, hygiene, and artistry under
+            , Naksh Unisex Salon brings together luxury, hygiene, and artistry under
             one roof. Step in, relax, and let our experts craft a look that truly
             defines you — because your beauty deserves the best touch.
           </p>

@@ -14,23 +14,23 @@ const blogPosts = {
 
       <h2>1. Textured Layers for Effortless Volume</h2>
       <p>Forget flat and lifeless hair! 2025 is all about <strong>soft, tousled layers</strong> that add natural movement and volume. Perfect for both men and women in Sikar, this trend gives a <strong>lightweight, carefree finish</strong> that's easy to maintain. Pair it with a light mousse or salt spray for that salon-fresh bounce every day.</p>
-      <p><em>Pro Tip from Naksh Salon Sikar:</em> Ask for feathered or choppy layers to enhance natural texture — especially great for wavy or thick hair types common in Rajasthan's climate.</p>
+      <p><em>Pro Tip from Naksh Unisex Salon Sikar:</em> Ask for feathered or choppy layers to enhance natural texture — especially great for wavy or thick hair types common in Rajasthan's climate.</p>
 
       <h2>2. The Gender-Neutral Crop</h2>
       <p>Minimalist and edgy, the <strong>modern crop cut</strong> is making waves this year in Sikar. It's a low-maintenance look that suits almost every face shape. With a little texture on top and clean edges, it creates a bold yet polished appearance — ideal for professionals and trendsetters alike in Rajasthan.</p>
-      <p><em>Why We Love It at Naksh Salon:</em> It's quick to style and effortlessly chic — a true unisex favorite for 2025 in Sikar.</p>
+      <p><em>Why We Love It at Naksh Unisex Salon:</em> It's quick to style and effortlessly chic — a true unisex favorite for 2025 in Sikar.</p>
 
       <h2>3. Glossy Brunettes & Expensive Blondes</h2>
       <p>Move over, pastel hues — 2025 is about <strong>luxurious, natural tones with a high-gloss finish</strong>. Brunettes are embracing <strong>deep espresso and chocolate shades</strong>, while blondes are opting for <strong>buttery, sun-kissed tones</strong> with smooth dimension. A shine-boosting gloss treatment can instantly enhance color depth and give your hair that red-carpet glow.</p>
-      <p><em>Salon Secret from Naksh Sikar:</em> Try our <strong>Luminous Gloss Therapy</strong> at Naksh Salon Sikar for a radiant, mirror-like shine that lasts weeks.</p>
+      <p><em>Salon Secret from Naksh Sikar:</em> Try our <strong>Luminous Gloss Therapy</strong> at Naksh Unisex Salon Sikar for a radiant, mirror-like shine that lasts weeks.</p>
 
       <h2>4. Statement Highlights & Face-Framing Streaks</h2>
       <p>Add personality without a full color overhaul! 2025 highlights are <strong>strategic and expressive</strong> — think face-framing streaks, peekaboo highlights, or vivid tips. Whether you want a subtle pop of caramel or a bold streak of electric blue, this trend lets you <strong>play with contrast</strong> while keeping things classy.</p>
-      <p><em>Pro Tip from Our Sikar Stylists:</em> Choose highlight shades that complement your skin tone — our expert stylists at Naksh Salon can help you find your perfect match.</p>
+      <p><em>Pro Tip from Our Sikar Stylists:</em> Choose highlight shades that complement your skin tone — our expert stylists at Naksh Unisex Salon can help you find your perfect match.</p>
 
       <h2>5. Healthy Hair is the Ultimate Trend</h2>
       <p>The biggest statement of 2025? <strong>Strong, shiny, healthy hair.</strong> With increased awareness around scalp care, people in Sikar are focusing on nourishment from root to tip. Hydration treatments, bond-repair masks, and scalp massages are now essentials — not luxuries.</p>
-      <p><em>Try at Naksh Salon Sikar:</em> Our <strong>Hydra Repair Spa Treatment</strong> revives dull strands, strengthens follicles, and boosts natural shine — perfect for Rajasthan's weather conditions.</p>
+      <p><em>Try at Naksh Unisex Salon Sikar:</em> Our <strong>Hydra Repair Spa Treatment</strong> revives dull strands, strengthens follicles, and boosts natural shine — perfect for Rajasthan's weather conditions.</p>
 
       <h2>Ready for a 2025 Hair Makeover in Sikar?</h2>
       <p>Trends may change, but confidence is timeless. Whether you're looking to revamp your look or simply refresh your style, <strong>Naksh Unisex Salon Sikar</strong> is here to bring your hair goals to life — with precision, care, and creativity.</p>
@@ -48,19 +48,19 @@ const blogPosts = {
     category: "Hair Care",
     readTime: "5 min read",
     publishDate: "2024-12-15",
-    author: "Naksh Salon Team"
+    author: "Naksh Unisex Salon Team"
   },
 
   "bridal-makeup-guide-sikar": {
     title: "Bridal Makeup Guide for Sikar Weddings – Look Radiant on Your Big Day",
-    excerpt: "Complete bridal makeup guide for Sikar weddings. Pre-wedding skin prep, traditional looks, and long-lasting beauty tips from Naksh Salon experts in Rajasthan.",
+    excerpt: "Complete bridal makeup guide for Sikar weddings. Pre-wedding skin prep, traditional looks, and long-lasting beauty tips from Naksh Unisex Salon experts in Rajasthan.",
     content: `
       <p><strong>Every bride in Sikar dreams of looking picture-perfect on her wedding day — radiant, confident, and effortlessly beautiful.</strong></p>
       <p>At <strong>Naksh Unisex Salon Sikar</strong>, we understand that bridal beauty isn't just about makeup; it's about expressing your personality through elegance. From pre-bridal care to final touches, here's your ultimate guide to glowing like a goddess on your big day in <strong>Rajasthan</strong>.</p>
 
       <h2>1. Start with Flawless Skin Preparation</h2>
       <p>Your bridal glow begins with your skin. Start prepping at least two months before your wedding — include regular facials, exfoliation, and hydration. Glowing skin makes every makeup product sit beautifully.</p>
-      <p><em>Pro Tip from Naksh Salon Sikar:</em> Our <strong>Bridal Radiance Facial</strong> gently revives dull skin and enhances luminosity for a naturally dewy finish perfect for Sikar's climate.</p>
+      <p><em>Pro Tip from Naksh Unisex Salon Sikar:</em> Our <strong>Bridal Radiance Facial</strong> gently revives dull skin and enhances luminosity for a naturally dewy finish perfect for Sikar's climate.</p>
 
       <h2>2. Choose the Right Base – Less is More</h2>
       <p>A flawless base is key to bridal makeup. In 2025, brides in Rajasthan are embracing <strong>natural, breathable skin</strong> over heavy foundations. Opt for lightweight HD or airbrush makeup that lasts long and looks real in every lighting condition.</p>
@@ -83,7 +83,7 @@ const blogPosts = {
 
       <div class="bg-gray-800 p-6 rounded-lg mt-8">
         <h3 class="text-[#d4af37] text-xl font-semibold mb-3">Book Your Bridal Makeup in Sikar</h3>
-        <p class="text-gray-300 mb-4">💍 Book your <strong>Bridal Makeup Trial</strong> today at Naksh Salon Sikar and step into your wedding day with unmatched confidence and timeless grace.</p>
+        <p class="text-gray-300 mb-4">💍 Book your <strong>Bridal Makeup Trial</strong> today at Naksh Unisex Salon Sikar and step into your wedding day with unmatched confidence and timeless grace.</p>
         <div class="flex flex-col sm:flex-row gap-3">
           <a href="tel:+918690900970" class="bg-[#d4af37] text-black px-4 py-2 rounded text-center font-semibold">📞 Call +91-8690900970</a>
           <a href="https://wa.me/918690900970" class="border border-[#d4af37] text-[#d4af37] px-4 py-2 rounded text-center font-semibold">💬 WhatsApp</a>
@@ -93,7 +93,7 @@ const blogPosts = {
     category: "Bridal Beauty",
     readTime: "7 min read", 
     publishDate: "2024-12-10",
-    author: "Naksh Salon Team"
+    author: "Naksh Unisex Salon Team"
   },
 
   "self-care-routine-sikar": {
@@ -114,7 +114,7 @@ const blogPosts = {
 
       <h2>4. Nourish & Hydrate</h2>
       <p>Apply a hydrating mask or oil to restore your skin's natural balance. For hair, indulge in a <strong>deep-conditioning mask</strong> or oil massage to strengthen and add shine — especially important in Rajasthan's dry weather.</p>
-      <p><em>Pro Tip from Naksh Salon Sikar:</em> Warm coconut or argan oil works wonders for dry, frizzy hair common in Sikar.</p>
+      <p><em>Pro Tip from Naksh Unisex Salon Sikar:</em> Warm coconut or argan oil works wonders for dry, frizzy hair common in Sikar.</p>
 
       <h2>5. Relaxation Rituals</h2>
       <p>Massage your shoulders, scalp, and feet to relieve tension. Even 10 minutes can boost blood flow and release endorphins, leaving you feeling recharged after a long day in Sikar.</p>
@@ -136,7 +136,7 @@ const blogPosts = {
     category: "Self Care",
     readTime: "4 min read",
     publishDate: "2024-12-05",
-    author: "Naksh Salon Team"
+    author: "Naksh Unisex Salon Team"
   }
 };
 
@@ -193,7 +193,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Naksh Unisex Salon Blog</title>
         <meta name="description" content={post.excerpt} />
-        <meta name="keywords" content={`${post.category}, beauty tips, salon services, Sikar, Rajasthan, Naksh Salon`} />
+        <meta name="keywords" content={`${post.category}, beauty tips, salon services, Sikar, Rajasthan, Naksh Unisex Salon`} />
         <meta name="author" content={post.author} />
         
         {/* Canonical URL */}

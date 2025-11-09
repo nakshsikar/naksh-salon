@@ -7,7 +7,7 @@ export default function About() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Naksh Unisex Salon Sikar",
-    "description": "Learn about Naksh Salon - best unisex salon in Sikar offering premium hair, skin, and beauty services for men and women.",
+    "description": "Learn about Naksh Unisex Salon - best unisex salon in Sikar offering premium hair, skin, and beauty services for men and women.",
     "url": "https://nakshsalon.com/about",
     "mainEntity": {
       "@type": "BeautySalon",
@@ -29,14 +29,14 @@ export default function About() {
     <>
       {/* 🧠 Enhanced SEO Meta Tags */}
       <Helmet>
-        <title>About Naksh Salon Sikar | Best Unisex Salon for Hair, Skin & Beauty Care</title>
+        <title>About Naksh Unisex Salon Sikar | Best Unisex Salon for Hair, Skin & Beauty Care</title>
         <meta
           name="description"
-          content="Naksh Salon Sikar - Luxury unisex salon offering premium haircuts, bridal makeup, facial, spa & beauty services. Expert stylists ✅ Affordable prices ✅ Book +91-8690900970"
+          content="Naksh Unisex Salon Sikar - Luxury unisex salon offering premium haircuts, bridal makeup, facial, spa & beauty services. Expert stylists ✅ Affordable prices ✅ Book +91-8690900970"
         />
         <meta
           name="keywords"
-          content="about naksh salon, best salon in sikar, unisex salon sikar, beauty parlour sikar, hair salon sikar, bridal makeup sikar, facial sikar, spa sikar, naksh salon about us"
+          content="about Naksh Unisex Salon, best salon in sikar, unisex salon sikar, beauty parlour sikar, hair salon sikar, bridal makeup sikar, facial sikar, spa sikar, Naksh Unisex Salon about us"
         />
         <meta name="author" content="Naksh Unisex Salon" />
         
@@ -44,13 +44,13 @@ export default function About() {
         <link rel="canonical" href="https://nakshsalon.com/about" />
         
         {/* Open Graph Tags */}
-        <meta property="og:title" content="About Naksh Salon Sikar | Best Unisex Salon for Hair & Beauty" />
-        <meta property="og:description" content="Learn about Naksh Salon - premium unisex salon in Sikar offering hair styling, bridal makeup, facial and beauty services for men and women." />
+        <meta property="og:title" content="About Naksh Unisex Salon Sikar | Best Unisex Salon for Hair & Beauty" />
+        <meta property="og:description" content="Learn about Naksh Unisex Salon - premium unisex salon in Sikar offering hair styling, bridal makeup, facial and beauty services for men and women." />
         <meta property="og:url" content="https://nakshsalon.com/about" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}
-        <meta name="twitter:title" content="About Naksh Salon Sikar | Best Unisex Salon" />
+        <meta name="twitter:title" content="About Naksh Unisex Salon Sikar | Best Unisex Salon" />
         <meta name="twitter:description" content="Premium unisex salon in Sikar offering hair, skin and beauty services for men and women." />
       </Helmet>
 
@@ -68,7 +68,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold text-[#d4af37] mb-8 text-center tracking-wide"
           >
-            About <span className="text-white">Naksh Salon Sikar</span>
+            About <span className="text-white">Naksh Unisex Salon Sikar</span>
           </motion.h1>
 
           {/* Intro Section with Local SEO Keywords */}
@@ -78,16 +78,16 @@ export default function About() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="bg-white/5 backdrop-blur-lg border border-[#d4af37]/20 rounded-3xl p-8 shadow-[0_0_30px_rgba(212,175,55,0.1)]"
           >
-            <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Welcome to Naksh Salon - Best Salon in Sikar</h2>
+            <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Welcome to Naksh Unisex Salon - Best Salon in Sikar</h2>
             <p className="text-lg leading-relaxed text-gray-300 mb-6">
-              Welcome to <span className="text-[#d4af37] font-semibold">Naksh Salon Sikar</span> — 
+              Welcome to <span className="text-[#d4af37] font-semibold">Naksh Unisex Salon Sikar</span> — 
               Rajasthan's premium <span className="text-[#d4af37]">unisex salon</span> where beauty meets luxury. 
               As the <strong>best salon in Sikar</strong>, we bring you world-class grooming, styling, 
               and wellness experiences designed to elevate your personality and confidence.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-400">
-              Located in the heart of <strong>Sikar, Rajasthan</strong>, Naksh Salon specializes in 
+              Located in the heart of <strong>Sikar, Rajasthan</strong>, Naksh Unisex Salon specializes in 
               modern haircuts, advanced skincare, bridal makeovers and spa therapies.  
               Our team of <strong>expert stylists in Sikar</strong> blend art, innovation, and comfort 
               to create transformations that last.
@@ -142,7 +142,7 @@ export default function About() {
               </p>
               <p className="text-gray-400 leading-relaxed">
                 We stay ahead with the latest trends to serve the <strong>Sikar community</strong> with 
-                premium salon experiences. Because at <span className="text-[#d4af37]">Naksh Salon Sikar</span>, 
+                premium salon experiences. Because at <span className="text-[#d4af37]">Naksh Unisex Salon Sikar</span>, 
                 your satisfaction defines our success.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mt-16 bg-white/5 backdrop-blur-lg border border-[#d4af37]/20 rounded-3xl p-8"
           >
-            <h2 className="text-3xl font-semibold text-[#d4af37] text-center mb-8">Why Choose Naksh Salon in Sikar?</h2>
+            <h2 className="text-3xl font-semibold text-[#d4af37] text-center mb-8">Why Choose Naksh Unisex Salon in Sikar?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-white">Expert Stylists</h3>
@@ -186,7 +186,7 @@ export default function About() {
             className="mt-20 text-center"
           >
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Visit <span className="text-[#d4af37]">Naksh Salon Sikar</span> today — 
+              Visit <span className="text-[#d4af37]">Naksh Unisex Salon Sikar</span> today — 
               your trusted <strong>unisex salon in Sikar, Rajasthan</strong> where artistry, 
               creativity, and comfort come together. Experience why we're called the 
               <strong> best salon in Sikar</strong>.

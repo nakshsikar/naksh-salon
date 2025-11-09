@@ -68,7 +68,7 @@ export default function BookNowSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#d4af37] text-black px-4 py-4 rounded-full font-semibold text-lg shadow-[0_0_25px_rgba(212,175,55,0.6)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.9)] flex items-center space-x-2"
-            aria-label="Book Appointment at Naksh Salon Sikar"
+            aria-label="Book Appointment at Naksh Unisex Salon Sikar"
           >
             <span>📅</span>
             <span>Book Appointment</span>
@@ -79,20 +79,20 @@ export default function BookNowSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="border-2 border-[#d4af37] text-[#d4af37] px-4 py-4 rounded-full font-semibold text-lg hover:bg-[#d4af37] hover:text-black transition-all duration-300 flex items-center space-x-2"
-            aria-label="Call Naksh Salon Sikar at +91-8690900970"
+            aria-label="Call Naksh Unisex Salon Sikar at +91-8690900970"
           >
             <span>📞</span>
             <span>Call Now</span>
           </motion.a>
 
           <motion.a
-            href="https://wa.me/918690900970?text=Hi! I want to book an appointment at Naksh Salon Sikar."
+            href="https://wa.me/918690900970?text=Hi! I want to book an appointment at Naksh Unisex Salon Sikar."
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="border-2 border-green-500 text-green-400 px-4 py-4 rounded-full font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300 flex items-center space-x-2"
-            aria-label="Message Naksh Salon Sikar on WhatsApp"
+            aria-label="Message Naksh Unisex Salon Sikar on WhatsApp"
           >
             <span>💬</span>
             <span>WhatsApp</span>

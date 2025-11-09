@@ -23,7 +23,7 @@ export default function WhyChooseUsSection() {
         className="relative z-10 text-center mb-16"
       >
         <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-          Why Choose <span className="text-[#d4af37]">Naksh Salon Sikar</span>?
+          Why Choose <span className="text-[#d4af37]">Naksh Unisex Salon Sikar</span>?
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
           Your trusted beauty destination in <strong>Sikar, Rajasthan</strong> for luxury grooming, 

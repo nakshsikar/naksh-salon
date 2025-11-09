@@ -32,7 +32,7 @@ const LoadingSpinner = () => {
       ></div>
       
       <p style={{ marginTop: '20px', fontSize: '18px', color: '#333' }}>
-        Loading Naksh Salon - Best Salon in Sikar...
+        Loading Naksh Unisex Salon - Best Salon in Sikar...
       </p>
       
       {/* Hidden content for SEO during loading */}
