@@ -11,7 +11,6 @@ function Navbar() {
       ? "text-[#d4af37] font-semibold"
       : "text-gray-300 hover:text-[#d4af37] transition";
 
-  // SEO optimized navigation items with proper titles
   const navItems = [
     { path: "/", label: "Home", title: "Naksh Unisex Salon - Best Unisex Salon in Sikar" },
     { path: "/about", label: "About", title: "About Naksh Unisex Salon - Our Story & Expertise" },
@@ -21,21 +20,18 @@ function Navbar() {
   ];
 
   return (
-    <nav 
-      className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[80%] lg:w-[70%]
+    <nav
+      className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[85%] xl:w-[70%]
       bg-black/30 backdrop-blur-xl border border-[#d4af37]/20 
       shadow-[0_0_20px_rgba(212,175,55,0.25)] rounded-2xl z-50 transition-all duration-500"
-      
-      // SEO & Accessibility Attributes
       role="navigation"
       aria-label="Main Navigation"
       itemScope
       itemType="https://schema.org/SiteNavigationElement"
     >
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
         
-        {/* Logo with SEO optimized attributes */}
+        {/* Logo */}
         <Link 
           to="/" 
           className="flex items-center gap-2 shrink-0"
@@ -57,9 +53,9 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Menu - Hidden on mobile and tablet */}
+        {/* Desktop Menu */}
         <div 
-          className="hidden lg:flex space-x-6 xl:space-x-8 text-sm uppercase tracking-wide"
+          className="hidden xl:flex items-center space-x-6 text-sm uppercase tracking-wide flex-nowrap"
           role="menubar"
           aria-label="Main Menu"
         >
@@ -75,26 +71,24 @@ function Navbar() {
               <span itemProp="name">{item.label}</span>
             </Link>
           ))}
+          <Link
+            to="/career"
+            className="px-4 py-2 bg-[#d4af37]/20 border border-[#d4af37]/50 
+            rounded-full text-[#d4af37] text-sm uppercase tracking-wide 
+            hover:bg-[#d4af37]/30 transition duration-300 shadow-[0_0_10px_rgba(212,175,55,0.3)] 
+            whitespace-nowrap"
+            title="Career Opportunities at Naksh Unisex Salon Sikar"
+            aria-label="Explore career opportunities at Naksh Unisex Salon"
+            role="button"
+          >
+            Join Our Team
+          </Link>
         </div>
 
-        {/* Career Button - Hidden on mobile and tablet */}
-        <Link
-          to="/career"
-          className="hidden lg:inline-block px-4 py-2 bg-[#d4af37]/20 border border-[#d4af37]/50 
-          rounded-full text-[#d4af37] text-sm uppercase tracking-wide 
-          hover:bg-[#d4af37]/30 transition duration-300 shadow-[0_0_10px_rgba(212,175,55,0.3)] 
-          whitespace-nowrap shrink-0"
-          title="Career Opportunities at Naksh Unisex Salon Sikar"
-          aria-label="Explore career opportunities at Naksh Unisex Salon"
-          role="button"
-        >
-          Join Our Team
-        </Link>
-
-        {/* Mobile Menu Button - Show on lg breakpoint and below */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#d4af37] hover:text-white transition p-2"
+          className="xl:hidden text-[#d4af37] hover:text-white transition p-2"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
@@ -103,11 +97,11 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu - Show on lg breakpoint and below */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div 
           id="mobile-menu"
-          className="lg:hidden bg-black/80 backdrop-blur-xl border-t border-[#d4af37]/20 
+          className="xl:hidden bg-black/80 backdrop-blur-xl border-t border-[#d4af37]/20 
           px-6 py-5 space-y-4 text-sm uppercase tracking-wide 
           flex flex-col rounded-b-2xl text-center shadow-[0_0_15px_rgba(212,175,55,0.2)]"
           role="menu"
@@ -140,7 +134,7 @@ function Navbar() {
         </div>
       )}
 
-      {/* Structured Data for Site Navigation */}
+      {/* Schema Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
