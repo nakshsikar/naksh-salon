@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import AboutSection from "../components/aboutSection";
 import BookNowSection from "../components/bookNowSection";
-import FAQSection from "../components/FaqSection";
+import FAQSection from "../components/faqSection";
 import HeroSection from "../components/heroSection";
 import MovingGallerySection from "../components/movingGallerySection";
 import TestimonialsSection from "../components/testimonialsSection";
